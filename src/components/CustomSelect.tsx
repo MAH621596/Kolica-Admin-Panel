@@ -2,13 +2,13 @@ import { useState } from "react";
 import type { CustomSelectProps } from "@/components/types";
 
 const CustomSelect = ({
-  options, className, innerOptionsClass, divider, customArrows, name, value, onChange, onBlur
+  options, className, innerOptionsClass, selectParentClass, divider, customArrows, name, value, onChange, onBlur
 }: CustomSelectProps) => {
   const [open, setOpen] = useState(false);
   // const [selected, setSelected] = useState("Any");
 
   return (
-    <div className={`relative w-full`}>
+    <div className={`relative w-full ${selectParentClass}`}>
 
       {/* Select Box */}
       <div

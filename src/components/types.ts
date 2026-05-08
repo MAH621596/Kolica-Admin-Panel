@@ -28,7 +28,7 @@ export interface InputProps {
   id?: string;
   icon?: ReactNode;
   name?: string;
-  type: "text" | "checkbox" | "password";
+  type: "text" | "checkbox" | "radio" | "password";
   value?: string;
   checked?: boolean;
   placeholder?: string;
@@ -51,11 +51,26 @@ export interface CheckBoxProps {
   onChange?: (value: string | boolean) => void;
 }
 
+export interface RadioBtnProps {
+  id?: string;
+  name?: string;
+  value?: string;
+  checked?: boolean;
+  custom_label_for?: string;
+  custom_label_text?: string;
+  radioBtnParent?: string;
+  inputClassName?: string;
+  labelClassName?: string;
+  onBlur?: (name?: string) => void;
+  onChange?: (value: string | boolean) => void;
+}
+
 export interface TextAreaProps {
   id?: string;
   value?: string;
   placeholder?: string;
   className?: string;
+  enableShortNote?: boolean;
   onChange?: (value: string) => void;
 }
 
@@ -101,6 +116,7 @@ export interface CustomSelectProps {
   value?: string;
   className?: string;
   innerOptionsClass?: string;
+  selectParentClass?: string;
   divider?: boolean;
   customArrows?: React.ReactNode;
   onBlur?: (name?: string) => void;

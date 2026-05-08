@@ -35,6 +35,18 @@ img {
    stroke-width: 2px;
 }
 
+.tox .tox-tbtn--select {
+  width: 90px !important;
+}
+
+.tox .tox-toolbar,
+.tox .tox-toolbar__primary {
+  background-color: #E9ECEF !important;
+}
+.tox:not(.tox-tinymce-inline) .tox-editor-header, .tox .tox-toolbar__group {
+  padding: 0 !important;
+}
+
 @media(max-width: 768px) {
 body {
   background: #FFFFFF;

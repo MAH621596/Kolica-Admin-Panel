@@ -641,6 +641,7 @@ const AdContent = () => {
                                     <h3 className="block mt-[40px] lg:mt-0 mb-[12px] text-[15px] text-[#627084">Notes</h3>
                                     <TextArea placeholder='Type here...' className='w-full h-[262px]'  
                                     value={fieldValue4}
+                                    enableShortNote={true}
                                     onChange={(val) => { setFieldValue4(val as string) }} />
                                     <p className="mb-[12px] text-[#627084] my-[24px] text-[16px] text-[#627084] leading-[27px]">
                                         The field for entering notes allows for a maximum of 4000 characters (or 8000 characters if you purchase the RICH TEXT option).

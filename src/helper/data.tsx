@@ -15,7 +15,6 @@ import {
   Car3,
   Car5,
 } from "@/assets";
-import { CustomInput } from "@/components";
 
 export const navbarLinks = [
   {
@@ -2167,22 +2166,16 @@ export const editUserData = [
       {
         icon: <i className={`fa fa-asterisk`} aria-hidden="true"></i>,
         label: "Example",
+        name: "Example-1",
         field_desc: `Required fields are additionally marked/colored.`,
-        field_input: <CustomInput
-          type="text"
-          value="obvezno polij"
-          className="!text-xs w-full border-[0.64px] !h-[16px]"
-        />
+        field_input: true
       },
       {
         icon: <i className={`fa fa-asterisk`} aria-hidden="true"></i>,
         label: "Example",
+        name: "Example-2",
         field_desc: `When you nake a mistake while entering data. It will be highlighted in red.`,
-        field_input: <CustomInput
-          type="text"
-          value="obvezno polij"
-          className="!text-xs w-full border-[0.64px] !h-[16px] bg-red-700 text-white"
-        />
+        field_input: true
       }
     ],
   },
@@ -2207,29 +2200,92 @@ export const userData = [
   },
 ];
 
-const custom_field_input = <CustomInput
-  type="text"
-  value="obvezno polij"
-  className="!text-xs w-full border-[0.64px] !h-[16px]"
-/>
-
 export const userInfoEdit = [
   {
     id: 1,
     label: "Information that will be published with your offer",
     list: [
-      { label: "Title", value: "S-AVTO, Zan Guzej sp" },
-      { label: "Branch name", field_input: custom_field_input },
-      { label: "Address", field_input: custom_field_input },
-      { label: "Post Office, City", field_input: custom_field_input },
+      { label: "Title", value: "S-AVTO, Zan Guzej sp", field_input: false },
+      { label: "Branch name", name: "branchName", field_input: true },
+      { label: "Address", name: "address", field_input: true },
+      { label: "Post Office, City", name: "city", field_input: true },
     ],
     card_subHeader: "Contact Information",
     subHeader_list: [
-      { label: "Phone", field_input: custom_field_input },
-      { label: "Comment", field_input: custom_field_input },
-      { label: "Fax", field_input: custom_field_input },
-      { label: "Email", field_input: custom_field_input },
-      { label: "Website", field_input: custom_field_input },
+      { label: "Phone", name: "phone", field_input: true },
+      { label: "Comment", name: "comment", field_input: true },
+      { label: "Fax", name: "fax", field_input: true },
+      { label: "Email", name: "email", field_input: true },
+      { label: "Website", name: "website", field_input: true },
+    ],
+  },
+];
+
+const hoursData = ["0","1","2","3","4","5","6","7","8"];
+
+export const userWorkingHours = [
+  {
+    id: 1,
+    label: "Working Hours",
+    list: [
+      { id: 1, label: "Activation", field_select: false, field_checkbox: true },
+      { id: 2, label: "Monday", data: hoursData, field_select: true },
+      { id: 3, label: "Tuesday", data: hoursData, field_select: true },
+      { id: 4, label: "Wednesday", data: hoursData, field_select: true },
+      { id: 5, label: "Thursday", data: hoursData, field_select: true },
+      { id: 6, label: "Friday", data: hoursData, field_select: true },
+      { id: 7, label: "Saturday", data: hoursData, field_select: true },
+      { id: 8, label: "Sunday", data: hoursData, field_select: true },
+      { id: 9, label: "Comment on the schedule", field_select: false, field_textArea: true },
+    ],
+  },
+];
+
+export const userPrintModeData = [
+  {
+    id: 1,
+    label: 'Set the default A4 print mode for "Windows sticker"',
+    list: [
+      { id: 101, label: "A4 + QR code", name: "window", field_radio: true },
+      { id: 201, label: "A4 + QR code (no price)", name: "window", field_radio: true },
+      { id: 301, label: "A4 - portrait", name: "window", field_radio: true },
+      { id: 401, label: "A4 - landscape", name: "window", field_radio: true },
+      { id: 501, label: "A4 + notes", name: "window", field_radio: true },
+      { id: 601, label: "A4 + photos", name: "window", field_radio: true },
+      { id: 701, label: "Old printout layout", name: "window", field_radio: true },
+    ],
+    card_subHeader: 'Set the default add sorting method in the administration',
+    subHeader_list: [
+      { id: 801,  label: "by brand: A to Z", name: "admin", field_radio: true },
+      { id: 901,  label: "by brand: Z to A", name: "admin", field_radio: true },
+      { id: 105, label: "by price: cheaper first", name: "admin", field_radio: true },
+      { id: 115, label: "by price: most expensive first", name: "admin", field_radio: true },
+      { id: 125, label: "older ads first", name: "admin", field_radio: true },
+      { id: 135, label: "newer ads first", name: "admin", field_radio: true },
+      { id: 145, label: "by year: older first", name: "admin", field_radio: true },
+      { id: 155, label: "by year: newer first", name: "admin", field_radio: true },
+      { id: 165, label: "by edit date: oldest first", name: "admin", field_radio: true },
+      { id: 175, label: "by edit date: newer first", name: "admin", field_radio: true },
+    ],
+  },
+];
+
+export const userSysLoginInfo = [
+  {
+    id: 1,
+    label: "System Login Information",
+    list: [
+      { label: "Email", 
+        name: "email", 
+        field_input: true, 
+        icon: <i className={`fa fa-info-circle`} aria-hidden="true"></i>, 
+      },
+      { 
+        label: "Password", 
+        name: "password", 
+        field_input: true, 
+        icon: <i className={`fa fa-info-circle`} aria-hidden="true"></i>, 
+      },
     ],
   },
 ];
