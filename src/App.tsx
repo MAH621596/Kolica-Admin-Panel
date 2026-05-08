@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import { Home, Login, UserDashboard, BusinessDashboard, MyAds, AdContent,
    ProductDetail, ProductListing, PhotoSelection, SectionSelection, 
    CarCategory, MotoCategory, EconomicCategory, MechanizationCategory, 
-   FreeTimeCategory, PartsEquimpCategory, BusinessPostAd, EditUserData } from "@/pages";
+   FreeTimeCategory, PartsEquimpCategory, BusinessPostAd, EditUserData, UserStatistics } from "@/pages";
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
         <Route path="/freetime-category" element={<FreeTimeCategory />} />
         <Route path="/parts-equimpments-category" element={<PartsEquimpCategory />} />
         <Route path="/user-dashboard" element={<UserDashboard />} />
+        <Route path="/statistics-user" element={<UserStatistics />} />
         <Route path="/business-dashboard" element={<BusinessDashboard />} />
         <Route path="/edit-user-data" element={<EditUserData />} />
         <Route path="/ad-content" element={<AdContent />} />

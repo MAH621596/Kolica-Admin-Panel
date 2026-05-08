@@ -88,7 +88,7 @@ const BusinessDashboard = () => {
                         cardBodyIcon={GlobTrade}
                         imageClass="w-full flex-1"
                         cardFooterText="Edit Logo"
-                        footerClass="!px-[16px]"
+                        footerClass="!px-[16px] !text-sm"
                     />
 
                     <DashboardCard
@@ -96,10 +96,11 @@ const BusinessDashboard = () => {
                         className="!py-[20px] !px-[16px] h-[80%] !justify-between"
                         cardBodyIcon={ProfileInfo}
                         cardBodyHeading="20"
-                        cardHeadingClass="!font-bold !text-4xl mb-2 text-end"
+                        cardHeadingClass="!font-bold !text-5xl mb-2 text-end"
                         cardBodySubHeading="Ads in post"
+                        cardSubHeadingClass="!text-sm"
                         cardFooterText="View all posts"
-                        footerClass="!px-[16px]"
+                        footerClass="!px-[16px] !text-sm"
                     />
 
                      <DashboardCard
@@ -107,10 +108,11 @@ const BusinessDashboard = () => {
                         className="!py-[20px] !px-[16px] h-[80%] !justify-between"
                         cardBodyIcon={Stats}
                         cardBodyHeading="192"
-                        cardHeadingClass="!font-bold !text-4xl mb-2 text-end"
+                        cardHeadingClass="!font-bold !text-5xl mb-2 text-end"
                         cardBodySubHeading="Views today"
+                        cardSubHeadingClass="!text-sm"
                         cardFooterText="Statistics overview"
-                        footerClass="!px-[16px]"
+                        footerClass="!px-[16px] !text-sm"
                     />                    
                 </div>
 
