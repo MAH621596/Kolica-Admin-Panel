@@ -1,4 +1,6 @@
 import type { ReactNode } from "react";
+import type { FormikProps } from "formik";
+export type FormValues = Record<string, any>;
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   text?: string;
@@ -7,6 +9,13 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   type: "button" | "submit";
   icon?: ReactNode;
   className?: string;
+}
+
+export interface BadgeProps {
+  text?: string;
+  icon?: ReactNode;
+  className?: string;
+  variant?: "primary" | "secondary" | "success" | "danger" | "info" | "warning";
 }
 
 export interface LabelProps {
@@ -220,4 +229,44 @@ export type ChartOptionsProps = {
   legendPosition?: "top" | "bottom" | "left" | "right";
   tooltipBg?: string;
   ySuffix?: string; // e.g "k", "%", "$"
+};
+
+export type InfoListProps = {
+  title?: string;
+  data: {
+    id: number;
+    list?: { id: number; point: string }[];
+    package_details_list?: { id: number; point: string }[];
+  }[];
+};
+
+export type FormFieldsCardProps = {
+  title?: string;
+  formik: FormikProps<FormValues>;
+
+  data: {
+    id: number;
+    label: string;
+    name: string;
+
+    showInline?: boolean;
+    input_select?: boolean;
+    input_field?: boolean;
+    placeholder?: string;
+    select_placeholder?: string;
+    options?: string[];
+
+    Note?: string;
+  }[];
+};
+
+export type FormCheckBoxesProps = {
+  title?: string;
+  formik: FormikProps<FormValues>;
+
+  data: {
+    id: number;
+    notice: string;
+    list?: { id: number; label: string; name: string; }[];
+  }[];
 };

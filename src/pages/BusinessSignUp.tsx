@@ -1,10 +1,10 @@
 import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Navbar, HeroCard, Button, Tabs, Footer } from "@/components";
 import { homePagetabsMenu, businessSignUpData } from '@/helper/data';
 
 const BusinessSignUp = ({ setLoggedIn }: any) => {
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     const [activeMainTab, setActiveMainTab] = useState<number>(0);
 
     console.log(setLoggedIn);
@@ -65,7 +65,11 @@ const BusinessSignUp = ({ setLoggedIn }: any) => {
                                 className="mt-[30px] w-full flex justify-center 
                                     !bg-[#B1222C] border-[#B1222C] 
                                     font-semibold text-xs lg:text-[18px] leading-[12px] !text-white h-[41px] 
-                                    hover:scale-90" />
+                                    hover:scale-90"
+                                onClick={() => {
+                                    navigate(`/post-a-new-ad/${signUpCard.navigate_link}`);
+                                }}
+                            />
                         </div>
                     </HeroCard>
                 ))}

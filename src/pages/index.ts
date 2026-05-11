@@ -18,3 +18,6 @@ export { default as FreeTimeCategory } from "../pages/Categories/FreeTimeCategor
 export { default as PartsEquimpCategory } from "../pages/Categories/Parts-EquimpmentsCategory";
 export { default as MechanizationCategory } from "../pages/Categories/MechanizationCategory";
 export { default as BusinessPostAd } from "../pages/BusinessPostAd";
+export { default as Individual } from "../pages/PostNewAd/Individual";
+export { default as LegalEntity } from "../pages/PostNewAd/LegalEntity";
+export { default as Trader } from "../pages/PostNewAd/Trader";

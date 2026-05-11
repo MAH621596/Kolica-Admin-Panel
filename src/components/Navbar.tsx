@@ -127,7 +127,7 @@ const Navbar = ({
           {navbarLinks.map((link, index) => {
             return (
               <span onClick={() => handleClick(link.href)} key={index} className={`flex items-center justify-start gap-[10px] font-semibold text-sm leading-[22px] transition-all duration-200 hover:opacity-80 ${link.link_text == "Saved" ? "col-span-2" : ""}  ${link.href == "/login" && logStatus ? "hidden" : "block"}`}>
-                <Button type="button" text={link.link_text} icon={<img src={link.icon} alt="img" className="w-[15px] h-[17px]" />} className={`!bg-[#B1222C] border-[#B1222C] justify-start font-normal text-sm !text-white h-[41px] hover:scale-110 w-full`} />
+                <Button pre={true} type="button" text={link.link_text} icon={<img src={link.icon} alt="img" className="w-[15px] h-[17px]" />} className={`!bg-[#B1222C] border-[#B1222C] justify-start font-normal text-sm !text-white h-[41px] hover:scale-110 w-full`} />
               </span>)
           })}
 
@@ -139,7 +139,7 @@ const Navbar = ({
             navigate("/");
           }}
         >
-           <Button type="button" text="Logout" icon={<img src={Profile} alt="img" className="hover:scale-110 w-[15px] h-[17px]" />} className={`!bg-[#B1222C] border-[#B1222C] justify-start font-normal text-sm !text-white h-[41px] cursor-pointer w-full`} />
+           <Button pre={true} type="button" text="Logout" icon={<img src={Profile} alt="img" className="hover:scale-110 w-[15px] h-[17px]" />} className={`!bg-[#B1222C] border-[#B1222C] justify-start font-normal text-sm !text-white h-[41px] cursor-pointer w-full`} />
         </span>}
       </div>
       </div>

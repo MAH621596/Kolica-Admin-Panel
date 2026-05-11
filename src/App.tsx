@@ -5,7 +5,7 @@ import { Home, Login, UserDashboard, BusinessDashboard, MyAds, AdContent,
    ProductDetail, ProductListing, PhotoSelection, SectionSelection, 
    CarCategory, MotoCategory, EconomicCategory, MechanizationCategory, 
    FreeTimeCategory, PartsEquimpCategory, BusinessPostAd, EditUserData, 
-   UserStatistics, BusinessSignUp } from "@/pages";
+   UserStatistics, BusinessSignUp, Individual, LegalEntity, Trader } from "@/pages";
 
 function App() {
   return (
@@ -26,6 +26,9 @@ function App() {
         <Route path="/business-signup" element={<BusinessSignUp />} />
         <Route path="/edit-user-data" element={<EditUserData />} />
         <Route path="/ad-content" element={<AdContent />} />
+        <Route path="/post-a-new-ad/individual" element={<Individual />} />
+        <Route path="/post-a-new-ad/legal_entity" element={<LegalEntity />} />
+        <Route path="/post-a-new-ad/trader" element={<Trader />} />
         <Route path="/post-an-add" element={<SectionSelection />} />
         <Route path="/select-photos" element={<PhotoSelection />} />
         <Route path="/product-detail" element={<ProductDetail />} />

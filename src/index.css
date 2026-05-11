@@ -4,6 +4,9 @@
 @theme {
   --font-poppins: "Poppins", sans-serif;
   --font-roboto: "Roboto", sans-serif;
+  --text-tiny: 0.719rem; 
+  --text-medium: 1.75rem; 
+  --color-bermuda: #626262;
 }
 
 body {

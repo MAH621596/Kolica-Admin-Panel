@@ -235,7 +235,7 @@ export const sectionTabsMenu = [
   {
     id: 3,
     label: "Post a new ad",
-    path: "/postad"
+    path: "/post-a-new-ad"
   },
   {
     id: 4,
@@ -2221,7 +2221,7 @@ export const userInfoEdit = [
   },
 ];
 
-const hoursData = ["0","1","2","3","4","5","6","7","8"];
+const hoursData = ["0", "1", "2", "3", "4", "5", "6", "7", "8"];
 
 export const userWorkingHours = [
   {
@@ -2256,8 +2256,8 @@ export const userPrintModeData = [
     ],
     card_subHeader: 'Set the default add sorting method in the administration',
     subHeader_list: [
-      { id: 801,  label: "by brand: A to Z", name: "admin", field_radio: true },
-      { id: 901,  label: "by brand: Z to A", name: "admin", field_radio: true },
+      { id: 801, label: "by brand: A to Z", name: "admin", field_radio: true },
+      { id: 901, label: "by brand: Z to A", name: "admin", field_radio: true },
       { id: 105, label: "by price: cheaper first", name: "admin", field_radio: true },
       { id: 115, label: "by price: most expensive first", name: "admin", field_radio: true },
       { id: 125, label: "older ads first", name: "admin", field_radio: true },
@@ -2275,16 +2275,17 @@ export const userSysLoginInfo = [
     id: 1,
     label: "System Login Information",
     list: [
-      { label: "Email", 
-        name: "email", 
-        field_input: true, 
-        icon: <i className={`fa fa-info-circle`} aria-hidden="true"></i>, 
+      {
+        label: "Email",
+        name: "email",
+        field_input: true,
+        icon: <i className={`fa fa-info-circle`} aria-hidden="true"></i>,
       },
-      { 
-        label: "Password", 
-        name: "password", 
-        field_input: true, 
-        icon: <i className={`fa fa-info-circle`} aria-hidden="true"></i>, 
+      {
+        label: "Password",
+        name: "password",
+        field_input: true,
+        icon: <i className={`fa fa-info-circle`} aria-hidden="true"></i>,
       },
     ],
   },
@@ -2297,27 +2298,28 @@ export const businessSignUpData = [
     package_price: '0',
     package_duration: 'for an ad',
     list: [
-      { 
-        id: 1, 
-        point: "Post a FREE ad (*)" 
+      {
+        id: 1,
+        point: "Post a FREE ad (*)"
       },
-      { 
-        id: 2, 
-        point: "PARKING popular ads" 
+      {
+        id: 2,
+        point: "PARKING popular ads"
       },
-      { 
-        id: 3, 
-        point: "PARKING search criteria"  
+      {
+        id: 3,
+        point: "PARKING search criteria"
       },
-      { 
+      {
         id: 4,
-        point: "Possibility of advertising exposure (*additional cost option)" 
+        point: "Possibility of advertising exposure (*additional cost option)"
       },
-      { 
-        id: 5, 
-        point: "A4 + QR code" 
+      {
+        id: 5,
+        point: "A4 + QR code"
       },
     ],
+    navigate_link: 'individual',
     package_details: `(*) Suitable exclusively for natural persons (individuals) who want to sell their own vehicle. In order to avoid illegal work, the number of free ads is limited to a maximum of 2 free ads per month or 2 unpaid ads at the same time. Free ads are only available in unpaid sections, and for users with successful SMS validation of the contact phone number.`
   },
   {
@@ -2326,27 +2328,28 @@ export const businessSignUpData = [
     package_price: '10',
     package_duration: 'per ad',
     list: [
-      { 
-        id: 1, 
-        point: "Publication of an individual advertisement for the sale of a fixed asset (*)" 
+      {
+        id: 1,
+        point: "Publication of an individual advertisement for the sale of a fixed asset (*)"
       },
-      { 
-        id: 2, 
-        point: "Possibility to publish prices excluding VAT" 
+      {
+        id: 2,
+        point: "Possibility to publish prices excluding VAT"
       },
-      { 
-        id: 3, 
-        point: "PARKING popular ads"  
+      {
+        id: 3,
+        point: "PARKING popular ads"
       },
-      { 
+      {
         id: 4,
-        point: "PARKING search criteria" 
+        point: "PARKING search criteria"
       },
-      { 
-        id: 5, 
-        point: "Possibility of advertising exposure (*additional cost option)" 
+      {
+        id: 5,
+        point: "Possibility of advertising exposure (*additional cost option)"
       },
     ],
+    navigate_link: 'legal_entity',
     package_details: `(*) Suitable exclusively for companies or individuals who carry out an activity and want to sell their own fixed asset.`
   },
   {
@@ -2355,27 +2358,475 @@ export const businessSignUpData = [
     package_price: '59',
     package_duration: '+ vat per month',
     list: [
-      { 
-        id: 1, 
-        point: "Posting ads as a legal entity - merchant(*)" 
+      {
+        id: 1,
+        point: "Posting ads as a legal entity - merchant(*)"
       },
-      { 
-        id: 2, 
-        point: "Possibility to publish prices excluding VAT" 
+      {
+        id: 2,
+        point: "Possibility to publish prices excluding VAT"
       },
-      { 
-        id: 3, 
-        point: "FREE 30 day trial period"  
+      {
+        id: 3,
+        point: "FREE 30 day trial period"
       },
-      { 
+      {
         id: 4,
-        point: "Advanced ad posting options (*optional)" 
+        point: "Advanced ad posting options (*optional)"
       },
-      { 
-        id: 5, 
-        point: "Statistical overview of the publication (*optional)" 
+      {
+        id: 5,
+        point: "Statistical overview of the publication (*optional)"
       },
     ],
+    navigate_link: 'trader',
     package_details: `(*) Suitable for all legal entities (ltd, sole proprietors, societies, institutes, associations, agencies...) that wish to advertise the sale or rental of vehicles, motorcycles, machinery or spare parts and equipment, within the framework of a registered activity.`
+  },
+];
+
+export const PostNewAdData = [
+  {
+    id: 1,
+    list: [
+      {
+        id: 1,
+        point: "When you want to post a FREE ad (*)"
+      },
+      {
+        id: 2,
+        point: "To SAVE your search CRITERIA"
+      },
+      {
+        id: 3,
+        point: "Option to PARK your favorite ads"
+      },
+      {
+        id: 4,
+        point: "Possibility to PARK your favorite search criteria"
+      },
+    ],
+    package_details_list: [
+      {
+        id: 1,
+        point: `(*) Suitable for natural persons / individuals who want to sell their own vehicle, machinery or equipment.`,
+      },
+      {
+        id: 2,
+        point: `Free advertising is only available in non-paying sections, and for users with successful SMS validation of the contact phone number.`,
+      },
+      {
+        id: 3,
+        point: `The number of free ads is limited to a maximum of 2 free ads per month or a maximum of 2 ads at the same time to avoid illegal work.`,
+      },
+    ],
+  },
+];
+
+export const basicInfoIndividual = [
+  {
+    id: 1,
+    label: "Name",
+    name: "Name",
+    input_field: true,
+    placeholder: "This information is mandatory, but will NOT be published when the ads are published.",
+  },
+  {
+    id: 2,
+    label: "Last name",
+    name: "LastName",
+    input_field: true,
+    placeholder: "This information is mandatory, but will NOT be published when the ads are published.",
+  },
+  {
+    id: 3,
+    label: "Country",
+    name: "Country",
+    dropDownCount: 1,
+    input_select: true,
+    select_placeholder: "Select Country",
+    options: [
+      'USA',
+      'UK',
+      'PAK',
+      'IND',
+      'AUS',
+      'MAL',
+      'SL',
+      'NY',
+      'ZM',
+      'NZ',
+    ]
+  },
+  {
+    id: 4,
+    label: "Post office or place",
+    name: "PostOffice",
+    dropDownCount: 1,
+    input_select: true,
+    select_placeholder: "Select Post office or place",
+    options: [
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+    ]
+  },
+  {
+    id: 5,
+    label: "Street",
+    name: "Street",
+    input_field: true,
+    placeholder: "This information is mandatory, but will NOT be published when the ads are published.",
+  },
+  {
+    id: 6,
+    label: "House number",
+    name: "HouseNo",
+    input_field: true,
+    placeholder: "This information is mandatory, but will NOT be published when the ads are published.",
+  },
+  {
+    id: 7,
+    input_field: false,
+    input_select: false,
+    label: "",
+    name: "Note",
+    Note: "Basic data (name and surname, street) are used only for the purposes of complying with the provisions of Article 6 of the ZPDZC, and WILL NOT be published with the advertisement.",
+  },
+];
+
+export const contactInfoIndividual = [
+  {
+    id: 1,
+    label: "Seller name:",
+    name: "SellerName",
+    input_select: true,
+    select_placeholder: "information is not mandatory",
+    options: [
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+    ]
+  },
+  {
+    id: 2,
+    label: "Phone",
+    name: "Phone",
+    showInline: true,
+    input_select: true,
+    select_placeholder: "Any",
+    options: [
+      "040 / 275 - 866",
+      "031 / 480 - 648",
+      "041 / 27980- 100",
+      "040 / 275 - 866",
+      "041 / 208 - 568",
+      "031 / 480 - 648",
+    ]
+  },
+  {
+    id: 3,
+    label: "Details",
+    name: "Details",
+    showInline: true,
+    input_field: true,
+    placeholder: "This information is mandatory, but will NOT be published when the ads are published.",
+  },
+  {
+    id: 4,
+    label: "Email address:",
+    name: "Email",
+    input_field: true,
+    placeholder: "This information is mandatory, but will NOT be published when the ads are published.",
+  },
+];
+
+export const PostNewAdLegalEntityData = [
+  {
+    id: 1,
+    list: [
+      {
+        id: 1,
+        point: "When you want to post an ad for the sale of a fixed asset (*)"
+      },
+      {
+        id: 2,
+        point: "Possibility to publish prices excluding VAT"
+      },
+      {
+        id: 3,
+        point: "To SAVE your search CRITERIA"
+      },
+      {
+        id: 4,
+        point: "Option to PARK your favorite ads"
+      },
+      {
+        id: 5,
+        point: "Possibility to PARK your favorite search criteria"
+      },
+    ],
+    package_details_list: [
+      {
+        id: 1,
+        point: `(*) Suitable exclusively for companies or natural persons who carry out an activity, are registered in Slovenia, and want to sell their own fixed asset.`,
+      },
+    ],
+  },
+];
+
+export const basicInfoLegalEntity = [
+  {
+    id: 1,
+    label: "Official name",
+    name: "OfficialName",
+    input_field: true,
+    placeholder: "This information is mandatory, but will NOT be published when the ads are published.",
+  },
+  {
+    id: 2,
+    label: "Tax number",
+    name: "TaxNo",
+    input_field: true,
+    placeholder: "This information is mandatory, but will NOT be published when the ads are published.",
+  },
+];
+
+export const passwordsLegalEntity = [
+  {
+    id: 1,
+    label: "Your password:",
+    name: "Password",
+    input_field: true,
+    placeholder: "***********",
+  },
+  {
+    id: 2,
+    label: "Repeat password:",
+    name: "confirmPassword",
+    input_field: true,
+    placeholder: "***********",
+  },
+];
+
+export const importantLegalEntity = [
+  {
+    id: 1,
+    notice: `A significant advantage of registration is the ability to publish an advertisement for the 
+      sale of a fixed asset. In order to avoid violations of the Unlawful Employment and Work Prevention 
+      Act (ZPDZC), it is necessary to enter information about the advertiser when registering. 
+      This information is only used to comply with the provisions of Article 6 of the ZPDZC, and WILL 
+      NOT be published with the advertisement.`,
+    list: [
+      {
+        id: 1,
+        label: "I declare that in the event of publishing an advertisement, I am selling my own fixed asset, and that the order to publish will not advertise illegal work within the meaning of the ZPDZC , or advertising activities.",
+        name: "declaration"
+      },
+      {
+        id: 2,
+        label: "I confirm that I have read and fully agree with the content of the legal notice.",
+        name: "confirmation"
+      },
+      {
+        id: 3,
+        label: "I want to receive comments and offers from visitors to my e-mail address.",
+        name: "aggregation"
+      },
+    ],
+  },
+];
+
+export const PostNewAdTraderData = [
+  {
+    id: 1,
+    list: [
+      {
+        id: 1,
+        point: "Posting an ad as a legal entity (*)"
+      },
+      {
+        id: 2,
+        point: "Possibility to publish prices excluding VAT"
+      },
+      {
+        id: 3,
+        point: "Free 30 day trial period"
+      },
+      {
+        id: 4,
+        point: "Advanced ad posting options (* optional)"
+      },
+      {
+        id: 5,
+        point: "Statistical overview of the publication (*optional)"
+      },
+    ],
+    package_details_list: [
+      {
+        id: 1,
+        point: `(*) Suitable for all legal entities (ltd, sole proprietors, societies, institutes, associations, agencies...) that wish to advertise the sale or rental of vehicles, motorcycles, machinery or spare parts and equipment, within the framework of a registered activity.`,
+      },
+    ],
+  },
+];
+
+export const importantTrader = [
+  {
+    id: 1,
+    notice: `When applying for registration, we ask that you also provide us with a signed or stamped copy of the official document confirming the registration of the company or joint stock company (source: AJPES).
+      You can send a copy of the document to the emailtrgovci@kolica.net.`,
+    list: [
+      {
+        id: 1,
+        label: "In accordance with the provisions of Article 6 of the Act on the Prevention of Illegal Work and Employment (ZPDZC-1, Official Gazette of the Republic of Slovenia No. 32/2014), we declare that our activity, the content of which refers to the publication of advertisements, is defined in the founding act or entered in the register.",
+        name: "declaration"
+      },
+      {
+        id: 2,
+        label: "I confirm that I have read and fully agree with the content of the legal notice.",
+        name: "confirmation"
+      },
+      {
+        id: 3,
+        label: "I want to receive comments and offers from visitors to my e-mail address.",
+        name: "aggregation"
+      },
+    ],
+  },
+];
+
+export const contactInfoTrader = [
+  {
+    id: 1,
+    label: "Branch name:",
+    name: "BranchName",
+    input_select: true,
+    select_placeholder: "information is not mandatory",
+    options: [
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+    ]
+  },
+  {
+    id: 2,
+    label: "Phone",
+    name: "Phone",
+    showInline: true,
+    input_select: true,
+    select_placeholder: "Any",
+    options: [
+      "040 / 275 - 866",
+      "031 / 480 - 648",
+      "041 / 27980- 100",
+      "040 / 275 - 866",
+      "041 / 208 - 568",
+      "031 / 480 - 648",
+    ]
+  },
+  {
+    id: 3,
+    label: "Details",
+    name: "Details",
+    showInline: true,
+    input_field: true,
+    placeholder: "This information is mandatory, but will NOT be published when the ads are published.",
+  },
+  {
+    id: 4,
+    label: "Email address:",
+    name: "Email",
+    input_field: true,
+    placeholder: "This information is mandatory, but will NOT be published when the ads are published.",
+  },
+  {
+    id: 5,
+    label: "Website",
+    name: "Website",
+    input_field: true,
+    placeholder: "This information is mandatory",
+  },
+];
+
+export const basicInfoTrader = [
+  {
+    id: 1,
+    label: "Official title",
+    name: "OfficialTitle",
+    input_field: true,
+    placeholder: "This information is mandatory.",
+  },
+  {
+    id: 2,
+    label: "Tax number",
+    name: "TaxNo",
+    input_field: true,
+    placeholder: "This information is mandatory.",
+  },
+  {
+    id: 3,
+    label: "Contact person",
+    name: "ContactPerson",
+    input_field: true,
+    placeholder: "This information is mandatory.",
+  },
+  {
+    id: 4,
+    label: "Country",
+    name: "Country",
+    dropDownCount: 1,
+    input_select: true,
+    select_placeholder: "Select Country",
+    options: [
+      'USA',
+      'UK',
+      'PAK',
+      'IND',
+      'AUS',
+      'MAL',
+      'SL',
+      'NY',
+      'ZM',
+      'NZ',
+    ]
+  },
+  {
+    id: 5,
+    label: "Post office or place",
+    name: "PostOffice",
+    dropDownCount: 1,
+    input_select: true,
+    select_placeholder: "Select Post office or place",
+    options: [
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+      "Lorem Ipsum",
+    ]
+  },
+  {
+    id: 6,
+    label: "Street",
+    name: "Street",
+    input_field: true,
+    placeholder: "This information is mandatory.",
+  },
+  {
+    id: 7,
+    label: "Address",
+    name: "Address",
+    input_field: true,
+    placeholder: "This information is mandatory.",
   },
 ];

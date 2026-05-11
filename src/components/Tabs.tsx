@@ -46,7 +46,7 @@ const Tabs = ({
                 {variant === "route" ?
                   <Link
                     to={tab.path || "#"}
-                    className={`flex items-center justify-center gap-2 font-semibold text-xs capitalize transition-all duration-200
+                    className={`flex items-center justify-center gap-2 font-semibold text-tiny capitalize transition-all duration-200
                   ${tabItemClassInner}
                   ${isActive ? activeTextClass : inactiveTextClass}`}
                   >
