@@ -24,7 +24,7 @@ export const navbarLinks = [
   {
     icon: <Dashboard className="stroke-current" />,
     link_text: "Dashboard",
-    href: "/dashboard",
+    href: "/",
   },
   {
     icon: <Listings className="stroke-current" />,

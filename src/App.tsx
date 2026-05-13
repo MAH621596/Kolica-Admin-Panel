@@ -4,10 +4,10 @@ import { Dashboard, Listings, Users, Merchants, PermiumMerchants, Filters, Trans
 function App() {
   return (
       <Routes>
+        <Route path="/" element={<Dashboard />} />
         <Route path="/users" element={<Users />} />
         <Route path="/filters" element={<Filters />} />
         <Route path="/listings" element={<Listings />} />
-        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/merchants" element={<Merchants />} />
         <Route path="/transactions" element={<Transactions />} />
         <Route path="/premium-Merchants" element={<PermiumMerchants />} />
