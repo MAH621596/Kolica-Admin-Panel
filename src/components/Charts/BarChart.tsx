@@ -43,9 +43,10 @@ type Props = {
   // dynamic options
   title?: string;
   showTitle?: boolean;
+  indexAxis?: "x" | "y";
   legendPosition?: "top" | "bottom" | "left" | "right";
   tooltipBg?: string;
-  ySuffix?: string;
+  ySuffix?: any;
   borderRadius?: number;
   categoryPercentage?: number;
 };
@@ -55,11 +56,11 @@ const BarChart = ({
   datasets,
   title = "",
   showTitle = false,
+  indexAxis,
   legendPosition = "top",
   tooltipBg = "#B1222C",
-  ySuffix = "",
+  ySuffix,
   borderRadius,
-  categoryPercentage
 }: Props) => {
 
   // DATA
@@ -73,14 +74,22 @@ const BarChart = ({
         ? createPattern(d.color || "#ccc")
         : d.color || "#B1222C",
       legendColor: d.color,
-      barPercentage: 0.9,
-      categoryPercentage: categoryPercentage || 0.5,
+      // barPercentage: 0.9,
+      // categoryPercentage: categoryPercentage || 0.5,
       // barThickness: barWidth || 20,
     })),
   };
 
+  const isHorizontal = indexAxis === "y";
+
   // DYNAMIC OPTIONS
   const options = {
+    indexAxis: indexAxis ?? "x",
+    elements: {
+      bar: {
+        borderWidth: 2,
+      },
+    },
     responsive: true,
     maintainAspectRatio: false,
     layout: { padding: 2 },
@@ -136,6 +145,7 @@ const BarChart = ({
 
     scales: {
       x: {
+        type: isHorizontal ? "linear" as const : "category" as const,
         stacked: false,
         grid: { display: false, drawBorder: false, },
         ticks: {
@@ -145,13 +155,28 @@ const BarChart = ({
         // 👇 key for responsiveness feel
         categoryPercentage: 0.6,
         barPercentage: 0.5,
+
       },
+
       y: {
+        type: isHorizontal ? "category" as const : "linear" as const,
         ticks: {
-          callback: (val: any) => val + ySuffix,
+          callback: (val: any, index: number) => {
+            if (Array.isArray(ySuffix)) {
+              const suffix = ySuffix[index];
+              return suffix ? `${suffix}` : `${val}`;
+            }
+
+            if (typeof ySuffix === "string" && ySuffix.length > 0) {
+              return `${val} ${ySuffix}`;
+            }
+
+            return val;
+          },
         },
         grid: { display: true, drawBorder: false, },
       },
+
     },
   };
 

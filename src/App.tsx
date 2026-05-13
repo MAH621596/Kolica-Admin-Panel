@@ -1,39 +1,16 @@
-import Form from "./components/Form"
 import { Routes, Route } from "react-router-dom";
-
-import { Home, Login, UserDashboard, BusinessDashboard, MyAds, AdContent,
-   ProductDetail, ProductListing, PhotoSelection, SectionSelection, 
-   CarCategory, MotoCategory, EconomicCategory, MechanizationCategory, 
-   FreeTimeCategory, PartsEquimpCategory, BusinessPostAd, EditUserData, 
-   UserStatistics, BusinessSignUp, Individual, LegalEntity, Trader } from "@/pages";
+import { Dashboard, Listings, Users, Merchants, PermiumMerchants, Filters, Transactions } from "@/pages";
 
 function App() {
   return (
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/form" element={<Form />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/my-ads" element={<MyAds />} />
-        <Route path="/car-category" element={<CarCategory />} />
-        <Route path="/moto-category" element={<MotoCategory />} />
-        <Route path="/economic-category" element={<EconomicCategory />} />
-        <Route path="/mechanic-category" element={<MechanizationCategory />} />
-        <Route path="/freetime-category" element={<FreeTimeCategory />} />
-        <Route path="/parts-equimpments-category" element={<PartsEquimpCategory />} />
-        <Route path="/user-dashboard" element={<UserDashboard />} />
-        <Route path="/statistics-user" element={<UserStatistics />} />
-        <Route path="/business-dashboard" element={<BusinessDashboard />} />
-        <Route path="/business-signup" element={<BusinessSignUp />} />
-        <Route path="/edit-user-data" element={<EditUserData />} />
-        <Route path="/ad-content" element={<AdContent />} />
-        <Route path="/post-a-new-ad/individual" element={<Individual />} />
-        <Route path="/post-a-new-ad/legal_entity" element={<LegalEntity />} />
-        <Route path="/post-a-new-ad/trader" element={<Trader />} />
-        <Route path="/post-an-add" element={<SectionSelection />} />
-        <Route path="/select-photos" element={<PhotoSelection />} />
-        <Route path="/product-detail" element={<ProductDetail />} />
-        <Route path="/product-listing" element={<ProductListing />} />
-        <Route path="/business-post-ad" element={<BusinessPostAd />} />
+        <Route path="/users" element={<Users />} />
+        <Route path="/filters" element={<Filters />} />
+        <Route path="/listings" element={<Listings />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/merchants" element={<Merchants />} />
+        <Route path="/transactions" element={<Transactions />} />
+        <Route path="/premium-Merchants" element={<PermiumMerchants />} />
       </Routes>
   );
 }

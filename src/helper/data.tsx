@@ -1,1388 +1,85 @@
 import {
-  Home_Icon, Carr, Byke, Moto, Economic, Mechanic, FreeTime, Parts, Saved,
-  Profile, Plus, SampleImage, Google, Apple, User, Password, CrossIcon, EuroIcon,
-  ContactInfo, ModernCar, EcoCar, LuxuryCar, RentalCar, ClassicCar, CrashedCar,
-  CatalogCar, FloodedCar, CarParts, CarTires, CarRims, EBike1, EBike2, EScooter,
-  FourWheeler, GoKart, MiniByke, Motorcycle, OldTimer, RentalOffer, Scooter,
-  SnowMobile, Mopped, Containers, UTV, Buses, Cargo, Trucks, DeliveryTruck, GlobTrade,
-  FarmMachine,
-  Machinery,
-  Troller,
-  ForkLifts,
-  MunicipalMachine,
-  Car1,
-  Car2,
-  Car3,
-  Car5,
+  Dashboard, 
+  Listings, 
+  Users,
+  Categories, 
+  Filters, 
+  Transactions, 
+  Reports, 
+  Promotions, 
+  Messages, 
+  Settings,
+  Listing, 
+  ActiveListing ,
+  PendingApproval, 
+  TotalUsers, 
+  Dealers, 
+  Revenue, 
+  FeaturedAds, 
+  Sales
 } from "@/assets";
+import type { DashboardAdminData, ListingAdminData, UsersListData } from "@/components/types";
 
 export const navbarLinks = [
   {
-    icon: Saved,
-    link_text: "Saved",
-    href: "/saved"
+    icon: <Dashboard className="stroke-current" />,
+    link_text: "Dashboard",
+    href: "/dashboard",
   },
   {
-    icon: Profile,
-    link_text: "Log in",
-    href: "/login"
+    icon: <Listings className="stroke-current" />,
+    link_text: "Listings",
+    href: "/listings",
   },
   {
-    icon: Plus,
-    link_text: "Post an ad",
-    href: "/post-an-add"
+    icon: <Users className="stroke-current" />,
+    link_text: "Users",
+    href: "/users",
   },
-];
-
-export const mobileNavbarLinks = [
   {
-    id: 1,
-    icon: Carr,
-    link_text: "Car",
-    href: "/car-category"
+    icon: <Users className="stroke-current" />,
+    link_text: "⁠Merchants",
+    href: "/merchants",
   },
   {
-    id: 2,
-    icon: Byke,
-    link_text: "Byke",
-    href: "/moto-category"
+    icon: <Users className="stroke-current" />,
+    link_text: "Premium Merchants",
+    href: "/premium-Merchants",
   },
   {
-    id: 3,
-    icon: Moto,
-    link_text: "Moto",
-    href: "/moto-category"
+    icon: <Categories className="stroke-current" />,
+    link_text: "Categories",
+    href: "/categories",
   },
   {
-    id: 4,
-    icon: Economic,
-    link_text: "Economic",
-    href: "/economic-category"
+    icon: <Filters className="stroke-current" />,
+    link_text: "Filters",
+    href: "/filters",
   },
   {
-    id: 5,
-    icon: Mechanic,
-    link_text: "Mechanization",
-    href: "/mechanic-category"
+    icon: <Transactions className="stroke-current" />,
+    link_text: "Transactions",
+    href: "/transactions",
   },
   {
-    id: 6,
-    icon: FreeTime,
-    link_text: "Free time",
-    href: "/FreeTime-category"
+    icon: <Reports className="stroke-current" />,
+    link_text: "Reports",
+    href: "/reports"
   },
   {
-    id: 7,
-    icon: Parts,
-    link_text: "Parts & equipment",
-    href: "/parts-equimpments-category"
+    icon: <Promotions className="stroke-current" />,
+    link_text: "Promotions",
+    href: "/promotions",
   },
-];
-
-export const footerLinks = [
   {
-    heading: "Company",
-    link1: "About Us",
-    link2: "Careers",
-    link3: "Press",
-    link4: "Blog",
+    icon: <Messages className="stroke-current" />,
+    link_text: "Messages",
+    href: "/messages",
   },
-
   {
-    heading: "Support",
-    link1: "Help Center",
-    link2: "Contact Us",
-    link3: "PFAQ",
-    link4: "Report Issue",
-  },
-
-  {
-    heading: "Legal",
-    link1: "Terms of Service",
-    link2: "Privacy Policy",
-    link3: "Cookie Policy",
-    link4: "GDPR",
-  },
-];
-
-export const homePagetabsMenu = [
-  {
-    id: 1,
-    icon: <Home_Icon className="w-[15px] h-[18px] group-hover:fill-[#253A86]" />,
-    path: "/"
-  },
-  {
-    id: 2,
-    label: "Moto",
-    path: "/moto-category"
-  },
-  {
-    id: 3,
-    label: "Car",
-    path: "/car-category"
-  },
-  {
-    id: 4,
-    label: "Economic",
-    path: "/economic-category"
-  },
-  {
-    id: 5,
-    label: "Mechanization",
-    path: "/mechanic-category"
-  },
-  {
-    id: 6,
-    label: "Free time",
-    path: "/freetime-category"
-  },
-  {
-    id: 7,
-    label: "Parts & equipment",
-    path: "/parts-equimpments-category"
-  },
-];
-
-export const photoSelectionData = [
-  {
-    image: SampleImage,
-    heading: "PHOTO 1",
-    footerbutton: true
-  },
-  {
-    image: SampleImage,
-    heading: "PHOTO 2",
-    footerbutton: true
-  },
-  {
-    image: SampleImage,
-    heading: "PHOTO 3",
-    footerbutton: true
-  },
-  {
-    image: SampleImage,
-    heading: "PHOTO 4",
-    footerbutton: true
-  },
-  {
-    image: SampleImage,
-    heading: "PHOTO 5",
-    footerbutton: true
-  },
-  {
-    image: SampleImage,
-    heading: "PHOTO 6",
-    footerbutton: true
-  },
-  {
-    image: SampleImage,
-    heading: "PHOTO 7",
-    footerbutton: true
-  },
-  {
-    image: SampleImage,
-    heading: "PHOTO 8",
-    footerbutton: true
-  },
-];
-
-export const photoSelectionCardDataContent = [
-  {
-    heading: "How to publish a photo?",
-    list: [
-      "'Click the '+ SELECT PHOTO TO POST' button and select the photo on your computer that you want to post with your ad.",
-      "'Once you have selected a photo, click on the 'ADD' button below the photo you want to add.",
-    ]
-  },
-  {
-    heading: "How many photos can I post?",
-    list: [
-      "A natural person/individual can publish up to 8 photos in a single ad.",
-      "A registered trader can publish up to 12 photos per ad.",
-      "A registered trader with the HD photo option activated can publish up to 20 photos per ad."
-    ]
-  },
-  {
-    heading: "General information about adding photos",
-    list: [
-      "The maximum allowed size of an individual photo is 20 Mb.",
-      "We recommend posting photos in 800x600 pix size, or up to 1920x1440 if you have purchased the HD photo option.",
-    ]
-  },
-  {
-    heading: "What do the buttons under already published photos mean?",
-    list: [
-      "the first photo is shown",
-      "by clicking the button you will move this photo to the first position",
-      "by clicking the button you will move this photo one position to the left",
-      "by clicking the button you will move this photo one position to the right",
-      "by clicking the button you will delete this photo from the post",
-    ]
-  },
-];
-
-export const sectionTabsMenu = [
-  {
-    id: 1,
-    icon: <Home_Icon className="w-[15px] h-[18px] group-hover:fill-[#253A86]" />,
-    path: "/"
-  },
-  {
-    id: 2,
-    label: "My ads",
-    path: "/my-ads"
-  },
-  {
-    id: 3,
-    label: "Post a new ad",
-    path: "/post-a-new-ad"
-  },
-  {
-    id: 4,
-    label: "Parked",
-    path: "/parked"
-  },
-  {
-    id: 5,
-    label: "Archive",
-    path: "/archive"
-  },
-  {
-    id: 6,
-    label: "Contact information",
-    path: "/contact"
-  },
-  {
-    id: 7,
-    label: "back to Kolica",
-    path: "/"
-  },
-];
-
-export const sectionInnerTabsMenu = [
-  {
-    id: 1,
-    label: "Car",
-    // path: "/ad-selection"
-  },
-  {
-    id: 2,
-    label: "Moto",
-    // path: "/moto"
-  },
-  {
-    id: 3,
-    label: "Commercial Vehicles",
-    // path: "/vehicles"
-  },
-  {
-    id: 4,
-    label: "Mechanization",
-    // path: "/mechanization"
-  },
-  {
-    id: 5,
-    label: "Free Time",
-    // path: "/freetime"
-  },
-  {
-    id: 6,
-    label: "Parts & equipment",
-    // path: "/parts"
-  },
-];
-
-export const tabContent = {
-  Home: {
-    title: "Quick search for passenger vehicles",
-    button_text: "Search Vehicle",
-  },
-  Car: {
-    title: "Rent a Car",
-    button_text: "Search Car",
-  },
-  Moto: {
-    title: "Sell Your Bike",
-    button_text: "Search Moto",
-  },
-  Economic: {
-    title: "Sell Your Vehicle",
-    button_text: "Search Economic",
-  },
-  Mechanization: {
-    title: "Sell Equipment",
-    button_text: "Search Equipment",
-  },
-  "Free time": {
-    title: "Free Time Services",
-    button_text: "Search Services",
-  },
-  "Parts & equipment": {
-    title: "Parts Marketplace",
-    button_text: "Search Parts",
-  }
-};
-
-export const dropdownData = [
-  {
-    id: 1, // Car Names / Brands
-    label: "Brands",
-    options: [
-      "Toyota",
-      "Honda",
-      "Suzuki",
-      "Hyundai",
-      "Kia",
-      "BMW",
-      "Mercedes",
-      "Audi",
-      "Nissan",
-      "MG"
-    ]
-  },
-  {
-    id: 2, // Price Range
-    label: "Model",
-    options: [
-      "2000 - 2005",
-      "2006 - 2010",
-      "2011 - 2015",
-      "2016 - 2020",
-      "2021 - 2022",
-      "2023 - 2024",
-      "2025+"
-    ]
-  },
-  {
-    id: 3, // KM Traveled
-    label: "Registration date from",
-    options: [
-      "16 June",
-      "17 June",
-      "18 June",
-      "19 June",
-      "20 June",
-      "21 June"
-    ]
-  },
-  {
-    id: 4, // All Models
-    label: "Kilometers to",
-    options: [
-      "0 - 10,000 km",
-      "10,000 - 30,000 km",
-      "30,000 - 50,000 km",
-      "50,000 - 80,000 km",
-      "80,000 - 120,000 km",
-      "120,000+ km"
-    ]
-  },
-  {
-    id: 5, // Years
-    label: "Price until",
-    options: [
-      "Under 5 Lakh",
-      "5 - 10 Lakh",
-      "10 - 20 Lakh",
-      "20 - 30 Lakh",
-      "30 - 50 Lakh",
-      "50 Lakh - 1 Crore",
-      "1 Crore+"
-    ]
-  },
-  {
-    id: 6, // Fuel Types
-    label: "City or postal code",
-    options: [
-      "75100",
-      "789456",
-      "25649854",
-      "3545632413",
-      "15649845"
-    ]
-  },
-  {
-    id: 7, // Fuel Types
-    label: "Fuel",
-    options: [
-      "Filter By Price",
-      "Filter By Model",
-      "Filter By Fuel",
-    ]
-  }
-];
-
-export const singleDropdownData = [
-  {
-    id: 1, // Car Names / Brands
-    label: "vehicle age:",
-    options: [
-      "Toyota",
-      "Honda",
-      "Suzuki",
-      "Hyundai",
-      "Kia",
-      "BMW",
-      "Mercedes",
-      "Audi",
-      "Nissan",
-      "MG"
-    ]
-  },
-];
-
-export const selectionDropdownData = [
-  {
-    id: 1,
-    label: "Brand",
-    dropDownCount: 1,
-    options: [
-      "Toyota",
-      "Honda",
-      "Suzuki",
-      "Hyundai",
-      "Kia",
-      "BMW",
-      "Mercedes",
-      "Audi",
-      "Nissan",
-      "MG"
-    ]
-  },
-  {
-    id: 2, // Price Range
-    label: "Model",
-    dropDownCount: 1,
-    options: [
-      "2000 - 2005",
-      "2006 - 2010",
-      "2011 - 2015",
-      "2016 - 2020",
-      "2021 - 2022",
-      "2023 - 2024",
-      "2025+"
-    ]
-  },
-  {
-    id: 3, // KM Traveled
-    label: "Body Shape",
-    dropDownCount: 1,
-    options: [
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-    ]
-  },
-  {
-    id: 4, // All Models
-    label: "Year and month of first registration:",
-    dropDownCount: 2,
-    options: [
-      "16 June",
-      "17 June",
-      "18 June",
-      "19 June",
-      "20 June",
-      "21 June"
-    ]
-  },
-];
-
-export const adContentRightPanel_1 = [
-  {
-    id: 1,
-    label: "Brands",
-    dropDownCount: 1,
-    options: [
-      "Toyota",
-      "Honda",
-      "Suzuki",
-      "Hyundai",
-      "Kia",
-      "BMW",
-      "Mercedes",
-      "Audi",
-      "Nissan",
-      "MG"
-    ]
-  },
-  {
-    id: 2, // Price Range
-    label: "Model",
-    dropDownCount: 1,
-    options: [
-      "2000 - 2005",
-      "2006 - 2010",
-      "2011 - 2015",
-      "2016 - 2020",
-      "2021 - 2022",
-      "2023 - 2024",
-      "2025+"
-    ]
-  },
-  {
-    id: 3, // KM Traveled
-    label: "Type",
-    dropDownCount: 1,
-    options: [
-      'Toyota',
-      'BMW',
-      'Dacia',
-      'Honda',
-      'Kia',
-      'Mercedes-Benz',
-      'Nissan',
-      'Renault',
-      'Suzuki',
-      'Volkswagen',
-    ]
-  },
-  {
-    id: 4, // All Models
-    label: "Shape",
-    dropDownCount: 1,
-    options: [
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-    ]
-  },
-  {
-    id: 5, // All Models
-    label: "VIN / chassis number:",
-    dropDownCount: 1,
-    options: [
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-    ]
-  },
-];
-
-export const adContentRightPanel_2 = [
-  {
-    id: 1,
-    label: "fuel:",
-    dropDownCount: 0,
-    inputField: true,
-    placeholder: "bencin"
-  },
-  {
-    id: 2, // Price Range
-    label: "drive train:",
-    dropDownCount: 1,
-    inputField: false,
-    options: [
-      "2000 - 2005",
-      "2006 - 2010",
-      "2011 - 2015",
-      "2016 - 2020",
-      "2021 - 2022",
-      "2023 - 2024",
-      "2025+"
-    ]
-  },
-  {
-    id: 3, // KM Traveled
-    label: "gearbox:",
-    dropDownCount: 1,
-    inputField: false,
-    options: [
-      'Toyota',
-      'BMW',
-      'Dacia',
-      'Honda',
-      'Kia',
-      'Mercedes-Benz',
-      'Nissan',
-      'Renault',
-      'Suzuki',
-      'Volkswagen',
-    ]
-  },
-  {
-    id: 4, // All Models
-    label: "engine power:",
-    dropDownCount: 2,
-    inputField: false,
-    options: [
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-    ]
-  },
-  {
-    id: 5, // All Models
-    label: "engine capacity:",
-    dropDownCount: 1,
-    inputField: false,
-    options: [
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-    ]
-  },
-];
-
-export const adContentRightPanel_3 = [
-  {
-    id: 1,
-    label: "number of seats:",
-    dropDownCount: 0,
-    inputField: true,
-    placeholder: "0"
-  },
-  {
-    id: 2, // Price Range
-    label: "upholstery:",
-    dropDownCount: 1,
-    inputField: false,
-    options: [
-      "2000 - 2005",
-      "2006 - 2010",
-      "2011 - 2015",
-      "2016 - 2020",
-      "2021 - 2022",
-      "2023 - 2024",
-      "2025+"
-    ]
-  },
-  {
-    id: 3, // KM Traveled
-    label: "upholstery color:",
-    dropDownCount: 1,
-    inputField: false,
-    options: [
-      'Toyota',
-      'BMW',
-      'Dacia',
-      'Honda',
-      'Kia',
-      'Mercedes-Benz',
-      'Nissan',
-      'Renault',
-      'Suzuki',
-      'Volkswagen',
-    ]
-  },
-];
-
-export const adContentRightPanel_4 = [
-  {
-    id: 1,
-    label: "Combined driving:",
-    dropDownCount: 0,
-    inputField: true,
-    placeholder: "0"
-  },
-  {
-    id: 2, // Price Range
-    label: "Emission class:",
-    dropDownCount: 1,
-    inputField: false,
-    options: [
-      "2000 - 2005",
-      "2006 - 2010",
-      "2011 - 2015",
-      "2016 - 2020",
-      "2021 - 2022",
-      "2023 - 2024",
-      "2025+"
-    ]
-  },
-  {
-    id: 3,
-    label: "CO2 emission:",
-    dropDownCount: 0,
-    inputField: true,
-    placeholder: "0"
-  },
-];
-
-export const checkboxList = [
-  {
-    id: 1,
-    label: "Gasoline",
-    value: "Gasoline",
-    check: true,
-  },
-  {
-    id: 2,
-    label: "Diesel",
-    value: "Diesel",
-    check: false,
-  },
-  {
-    id: 3,
-    label: "Hybrid Drive",
-    value: "Hybrid Drive",
-    check: false,
-  },
-  {
-    id: 4,
-    label: "E-Drive",
-    value: "E-Drive",
-    check: false,
-  },
-  {
-    id: 5,
-    label: "LPG Autogas",
-    value: "LPG Autogas",
-    check: false,
-  },
-  {
-    id: 6,
-    label: "CMG Natural Gas",
-    value: "CMG Natural Gas",
-    check: false,
-  },
-];
-
-export const checkboxList_2 = [
-  {
-    id: 1,
-    label: "the vehicle has a warranty"
-  },
-  {
-    id: 2,
-    label: "the vehicle has no warranty"
-  },
-];
-
-export const checkboxList_3 = [
-  {
-    id: 1,
-    label: "cash discount"
-  },
-  {
-    id: 2,
-    label: "last price!"
-  },
-  {
-    id: 3,
-    label: "leasing takeover"
-  },
-  {
-    id: 4,
-    label: "exchange"
-  },
-];
-
-export const checkboxList_4 = [
-  {
-    id: 1,
-    label: "The vehicle is being sold as a whole and not in PARTS."
-  },
-  {
-    id: 2,
-    label: "driving"
-  },
-  {
-    id: 3,
-    label: "undamaged"
-  },
-  {
-    id: 4,
-    label: "not crashed"
-  },
-  {
-    id: 5,
-    label: "undriven"
-  },
-  {
-    id: 6,
-    label: "damaged"
-  },
-  {
-    id: 7,
-    label: "caromed"
-  },
-  {
-    id: 8,
-    label: "broken (but NOT crashed)"
-  },
-  {
-    id: 19,
-    label: "the vehicle was flooded"
-  },
-  {
-    id: 10,
-    label: "Racing car"
-  },
-];
-
-export const checkboxList_5 = [
-  {
-    id: 1,
-    label: "service book"
-  },
-  {
-    id: 2,
-    label: "Slovenian origin"
-  },
-  {
-    id: 3,
-    label: "the vehicle was garaged"
-  },
-  {
-    id: 4,
-    label: "the vehicle was not in a collision"
-  },
-  {
-    id: 5,
-    label: "confirmed (in full - after service intervals)"
-  },
-];
-
-export const checkboxList_6 = [
-  {
-    id: 1,
-    heading: "Chassis:",
-    checkboxes: [
-      {
-        label: "brake system (ABS)"
-      },
-      {
-        label: "four-wheel drive (4x4 / 4WD / Quattro...)"
-      },
-      {
-        label: "brake assist (BAS / DBC / EBV)"
-      },
-      {
-        label: "traction control (ASR / DTC)"
-      },
-      {
-        label: "automatic differential lock (ASD / EDS ...)"
-      },
-      {
-        label: "electronic system for better wheel traction ETS"
-      },
-      {
-        label: "electronic system for better wheel traction ETS"
-      },
-      {
-        label: "sports chassis"
-      },
-      {
-        label: "electronic damper control (EDC)"
-      },
-      {
-        label: "active suspension (ABC - Active Body Control)"
-      },
-      {
-        label: "chassis level control (ADS)"
-      },
-      {
-        label: "air suspension"
-      },
-      {
-        label: "four-wheel steering (4WS / 4CONTROL)"
-      },
-    ]
-  },
-  {
-    id: 2,
-    heading: "Security:",
-    checkboxes: [
-      {
-        label: "RDK tire pressure monitoring"
-      },
-      {
-        label: "3rd brake light"
-      },
-      {
-        label: "xenon headlights"
-      },
-      {
-        label: "headlight washer"
-      },
-      {
-        label: "bi-xenon headlights"
-      },
-      {
-        label: "alarm device"
-      },
-      {
-        label: "automatic high beam control"
-      },
-      {
-        label: "engine immobilisation"
-      },
-      {
-        label: "LED headlights"
-      },
-      {
-        label: "code-protected engine ignition"
-      },
-      {
-        label: "front (daytime) LED lights"
-      },
-      {
-        label: "automatic emergency braking system"
-      },
-      {
-        label: "rear LED lights"
-      },
-      {
-        label: "lane departure warning system"
-      },
-      {
-        label: "fog lights"
-      },
-      {
-        label: "lane keeping system"
-      },
-      {
-        label: "Run-Flat tires"
-      },
-      {
-        label: "blind spot warning system"
-      },
-      {
-        label: "Distance warning"
-      },
-      {
-        label: "traffic sign recognition system"
-      },
-    ]
-  },
-  {
-    id: 3,
-    heading: "Interior:",
-    checkboxes: [
-      {
-        label: "Virtual Cockpit"
-      },
-      {
-        label: "seats: height adjustment"
-      },
-      {
-        label: "ambient interior lighting"
-      },
-      {
-        label: "seats: electric adjustment"
-      },
-      {
-        label: "wooden interior accessories"
-      },
-      {
-        label: "seats: Memory package"
-      },
-      {
-        label: "ALU interior accessories"
-      },
-      {
-        label: "seats: heated front"
-      },
-      {
-        label: "carbon interior accessories"
-      },
-      {
-        label: "chrome interior accessories"
-      },
-      {
-        label: "seats: cooling / ventilation"
-      },
-      {
-        label: "package for smokers"
-      },
-      {
-        label: "seats: massage function"
-      },
-      {
-        label: "seats: sports"
-      },
-      {
-        label: "center armrest between the seats"
-      },
-      {
-        label: "seats: comfortable"
-      },
-      {
-        label: "refrigerator compartment"
-      },
-      {
-        label: "seats: orthopedic"
-      },
-      {
-        label: "12V socket"
-      },
-    ]
-  },
-  {
-    id: 4,
-    heading: "Comfort:",
-    checkboxes: [
-      {
-        label: "air conditioning - manual"
-      },
-      {
-        label: "Keyless Go"
-      },
-      {
-        label: "automatic air conditioning / digital"
-      },
-      {
-        label: "Start-Stop system"
-      },
-      {
-        label: "air conditioning - 2 zones"
-      },
-      {
-        label: "electrical package"
-      },
-      {
-        label: "air conditioning - 3 zones"
-      },
-      {
-        label: "height-adjustable steering wheel"
-      },
-      {
-        label: "air conditioning - 4 zoness"
-      },
-      {
-        label: "depth-adjustable steering wheel"
-      },
-      {
-        label: "stationary vehicle heating (Webasto)"
-      },
-      {
-        label: "tinted windows"
-      },
-      {
-        label: "leather-wrapped steering wheel"
-      },
-      {
-        label: "electric front windows"
-      },
-      {
-        label: "multifunction steering wheel"
-      },
-      {
-        label: "electric front and rear windows"
-      },
-      {
-        label: "sports steering wheel"
-      },
-      {
-        label: "electrically adjustable exterior mirrors"
-      },
-      {
-        label: "heated steering wheel"
-      },
-      {
-        label: "heated exterior mirrors"
-      },
-      {
-        label: "steering wheel gearshift paddles + -"
-      },
-      {
-        label: "electrically folding exterior mirrorss"
-      },
-      {
-        label: "cruise control"
-      },
-      {
-        label: "central locking"
-      },
-      {
-        label: "adaptive cruise control (Adaptive Cruise Control)"
-      },
-      {
-        label: "central locking with remote control"
-      },
-      {
-        label: "electric parking brake"
-      },
-      {
-        label: "Soft-Close closing system"
-      },
-      {
-        label: "electric trunk closing"
-      },
-      {
-        label: "rear window sunshade"
-      },
-      {
-        label: "heated windshield"
-      },
-      {
-        label: "Soft-Close closing system"
-      },
-      {
-        label: "electric trunk closing"
-      },
-      {
-        label: "rear window sunshade"
-      },
-      {
-        label: "heated windshield"
-      },
-    ]
-  },
-];
-
-export const InformationParagraph = [
-  {
-    id: 1,
-    paragraph: "Quick entry is intended for quick and easy submission of an advertisement for a passenger vehicle. We have supported the advertisement submission form with a database of all passenger vehicles that have been sold at official dealers in Slovenia over the past 15 years."
-  },
-  {
-    id: 2,
-    paragraph: " Therefore, when submitting an advertisement, you will not need to enter detailed information about the vehicle, as the technical data, as well as data on standard equipment, will be entered automatically. In order for the data to be correct, you must therefore make sure that you enter the correct year and month of the vehicle's first registration when entering."
-  },
-  {
-    id: 3,
-    paragraph: "However, since we understand that many vehicles are equipped with additional equipment or imported from abroad, the equipment data may differ from the automatically entered data. Therefore, in the next step, you will be able to adjust the data as desired with data that perfectly matches your vehicle. The same advertisement submission form is also available for submitting an advertisement for a delivery vehicle."
-  },
-  {
-    id: 4,
-    paragraph: "The same advertisement submission form is also available for submitting an advertisement for a delivery vehicle."
-  },
-];
-
-export const adContentLeftPanelData = [
-  {
-    id: 1,
-    paragraph: "An icon for additional comments may be displayed next to certain input fields. The comment appears when you hover your mouse over the selected icon."
-  },
-  {
-    id: 2,
-    paragraph: "Required fields are additionally marked/colored."
-  },
-  {
-    id: 3,
-    field: true,
-    heading_: "Example",
-    inp_value: "Mandatory field",
-  },
-  {
-    id: 4,
-    paragraph: "When you make a mistake while entering data, it will be highlighted in red."
-  },
-  {
-    id: 5,
-    field: true,
-    heading_: "Example",
-    inp_value: "Mandatory field",
-  },
-  {
-    id: 6,
-    sub_heading: "Important!",
-    paragraph: "To avoid violations of the 'Act on the Prevention of Illegal Work and Employment', the 'Industrial Property Act', the 'Competition Protection Act' and the 'Consumer Protection Act', advertising in certain sections may be additionally restricted or only available to traders with registered activity."
-  },
-];
-
-export const HeroCardData = [
-  'Alfa Romeo',
-  'Citroën',
-  'FIAT',
-  'Jaguar',
-  'Lexus',
-  'MINI',
-  'Peugeot',
-  'Smart',
-  'Tesla',
-  'Audi',
-  'Cupra',
-  'Ford',
-  'Jeep',
-  'Mazda',
-  'Mitsubishi',
-  'Porsche',
-  'Subaru',
-  'Toyota',
-  'BMW',
-  'Dacia',
-  'Honda',
-  'Kia',
-  'Mercedes-Benz',
-  'Nissan',
-  'Renault',
-  'Suzuki',
-  'Volkswagen',
-  'Chevrolet',
-  'DS Automobiles',
-  'Hyundai',
-  'Land Rover',
-  'MG',
-  'Opel',
-  'SEAT',
-  'Škoda',
-  'Volvo',
-];
-
-export const vehicalData = [
-  {
-    id: 1,
-    input_label: "vehicle color:",
-    checkboxes: [
-      {
-        label: "metallic"
-      },
-      {
-        label: "matt"
-      },
-    ]
-  },
-  {
-    id: 2,
-    input_label: "vehicle roof:",
-    checkboxes: [
-      {
-        label: "electric movement"
-      },
-    ]
-  },
-  {
-    id: 3,
-    input_label: "number of doors:",
-    checkboxes: [
-      {
-        label: "sliding door"
-      },
-    ]
-  },
-];
-
-export const loginButtons = [
-  {
-    icon: Google,
-    link_text: "Sign in with Google",
-  },
-  {
-    icon: Apple,
-    link_text: "Sign in with Apple",
-  },
-];
-
-export const loginFields = [
-  {
-    id: "Email",
-    icon: User,
-    type: "text",
-    input_label: "Email",
-    placeholder: "example15@gmail.com"
-  },
-  {
-    id: "Password",
-    icon: Password,
-    type: "password",
-    input_label: "Password",
-    placeholder: "***************"
-  },
-];
-
-export const registerFields = [
-  {
-    id: "Username",
-    icon: User,
-    type: "text",
-    input_label: "Username",
-    placeholder: "Micheal Williamson"
-  },
-  {
-    id: "Email",
-    icon: User,
-    type: "text",
-    input_label: "Email",
-    placeholder: "example15@gmail.com"
-  },
-  {
-    id: "Password",
-    icon: Password,
-    type: "password",
-    input_label: "Password",
-    placeholder: "***************"
-  },
-];
-
-export const registerButtons = [
-  {
-    icon: Google,
-    link_text: "Sign up with Google",
-  },
-  {
-    icon: Apple,
-    link_text: "Sign up with Apple",
-  },
-];
-
-export const registerationPoints = [
-  {
-    id: 1,
-    point: "if you want to POST an ad as an INDIVIDUAL (*)"
-  },
-  {
-    id: 2,
-    point: "if you are a MERCHANT and want to POST MORE ADS (*)"
-  },
-  {
-    id: 3,
-    point: "when you want to save your FAVORITE search criteria"
-  },
-  {
-    id: 4,
-    point: "when you want to PARK your favorite ads"
-  },
-];
-
-export const dashboardRegistrationData = [
-  {
-    id: 1,
-    heading: "ADVERTISER TYPE",
-    subHeading: `Registered as a user on kolica since ${<br />} 5.8.2025 22:19:00`
-  },
-  {
-    id: 2,
-    icon: CrossIcon,
-    heading: "STATISTICS",
-    subHeading: "Available only for merchants"
-  },
-  {
-    id: 3,
-    icon: CrossIcon,
-    heading: "HD PHOTOS",
-    subHeading: "Not available yet"
-  },
-  {
-    id: 4,
-    icon: CrossIcon,
-    heading: "SPECIAL PRICES",
-    subHeading: "Available only for merchants"
-  },
-  {
-    id: 5,
-    icon: EuroIcon,
-    heading: "TOP OFFER",
-    subHeading: "Optional additional payment for advertising"
-  },
-  {
-    id: 6,
-    icon: CrossIcon,
-    heading: "RICH TEXT Editor",
-    subHeading: "Available only for merchants"
-  },
-  {
-    id: 7,
-    icon: CrossIcon,
-    heading: "COMMENT option",
-    subHeading: "Available only for merchants"
+    icon: <Settings className="stroke-current" />,
+    link_text: "Settings",
+    href: "/settings",
   },
 ];
 
@@ -1401,1432 +98,761 @@ export const barChartContent = [
   },
 ];
 
-export const sellerCardData = [
+export const dashboardAdminData: DashboardAdminData[] = [
   {
     id: 1,
-    icon: ContactInfo,
-    phoneNo: "04 / 2798000",
-    location: "Office",
+    revenue: 12.4,
+    icon: <Listing className="stroke-current" />,
+    title: "Total Listings",
+    count: "16,672",
+    variant: "info"
   },
   {
     id: 2,
-    phoneNo: "041 / 208 - 568",
-    location: "Primoz",
+    revenue: 8.1,
+    icon: <ActiveListing className="stroke-current" />,
+    title: "Active Listings",
+    count: "14,208",
+    variant: "success"
   },
   {
     id: 3,
-    phoneNo: "031 / 480 - 648",
-    location: "Gasper",
+    revenue: 18,
+    icon: <PendingApproval className="stroke-current" />,
+    title: "Pending Approval",
+    count: "248",
+    variant: "warning"
   },
   {
     id: 4,
-    phoneNo: "040 / 275 - 866",
-    location: "Eric",
-  },
-];
-
-export const workingHoursData = [
-  {
-    id: 1,
-    tableHeader: "Monday",
-    tableData: "from 8:00 to 16:00",
-  },
-  {
-    id: 2,
-    tableHeader: "Tuesday",
-    tableData: "from 8:00 to 16:00",
-  },
-  {
-    id: 3,
-    tableHeader: "Wednesday",
-    tableData: "from 8:00 to 16:00",
-  },
-  {
-    id: 4,
-    tableHeader: "Thursday",
-    tableData: "from 8:00 to 16:00",
+    revenue: 5.2,
+    icon: <TotalUsers className="stroke-current" />,
+    title: "Total Users",
+    count: "32,418",
+    variant: "info"
   },
   {
     id: 5,
-    tableHeader: "Friday",
-    tableData: "from 8:00 to 16:00",
+    revenue: 3.8,
+    icon: <Dealers className="stroke-current" />,
+    title: "Dealers / Individuals",
+    count: "1,284 / 31,134",
+    variant: "info"
   },
   {
     id: 6,
-    tableHeader: "Saturday",
-    tableData: "CLOSED",
+    revenue: 22.6,
+    icon: <Revenue className="stroke-current" />,
+    title: "Revenue (Month)",
+    count: "€48,920",
+    variant: "success"  
   },
   {
     id: 7,
-    tableHeader: "Sunday",
-    tableData: "CLOSED",
-  },
-];
-
-export const additionalOptionsData = [
-  {
-    id: 1,
-    icon: <i className="fa fa-lg fa-list-ol font-weight-bold"></i>,
-    label: "all dealer ads",
-  },
-  {
-    id: 2,
-    icon: <i className="fa fa-lg fa-print font-weight-bold"></i>,
-    label: "print offer",
-  },
-  {
-    id: 3,
-    icon: <i className="fa fa-lg fa-backward font-weight-bold"></i>,
-    label: "back to the previous page",
-  },
-  {
-    id: 4,
-    icon: <i className="fa fa-lg fa-envelope font-weight-bold"></i>,
-    label: "Tell a friend about the offer",
-  },
-  {
-    id: 5,
-    icon: <i className="fa fa-lg fa-comment font-weight-bold"></i>,
-    label: "reporting a controversial ad",
-  },
-  {
-    id: 6,
-    icon: <i className="fa fa-lg fa-star font-weight-bold"></i>,
-    label: "park at moj.avto.net",
-  },
-  {
-    id: 7,
-    label: "Buy safely",
+    revenue: 14,
+    icon: <FeaturedAds className="stroke-current" />,
+    title: "Featured Ads Live",
+    count: "186",
+    variant: "warning"
   },
   {
     id: 8,
-    icon: <i className="fa fa-lg fa-exclamation-triangle font-weight-bold"></i>,
-    label: "list of stolen vehicles",
-  },
-  {
-    id: 9,
-    icon: <i className="fa fa-lg fa-book font-weight-bold"></i>,
-    label: "register of liens",
-  },
-  {
-    id: 10,
-    icon: <i className="fa fa-lg fa-shield font-weight-bold"></i>,
-    label: "safety tips",
+    revenue: 9.7,
+    icon: <Sales className="stroke-current" />,
+    title: "Sales / Leads",
+    count: "2,481",
+    variant: "success"
   },
 ];
 
-export const basicData = [
+export const dashboardListingData: DashboardAdminData[] = [
   {
     id: 1,
-    tableHeader: "Age:",
-    tableData: "new",
+    title: "BMW 320d Touring",
+    subtitle: "Overview of your vehicle marketplace",
+    count: "€18,900", 
+    badgeLabel: "Active",
+    variant: "success",
   },
   {
     id: 2,
-    tableHeader: "Working hours:",
-    tableData: "",
+    title: "Audi A4 Avant 2.0 TDI",
+    subtitle: "Marko Novak · Maribor",
+    count: "€21,500", 
+    badgeLabel: "Pending",
+    variant: "warning",
   },
   {
     id: 3,
-    tableHeader: "Shape:",
-    tableData: "agricultural machinery (mulcher)",
+    title: "Volkswagen Golf 7 GTI",
+    subtitle: "CarPro d.o.o. · Celje",
+    count: "€15,400", 
+    badgeLabel: "Active",
+    variant: "success",
   },
   {
     id: 4,
-    tableHeader: "Internal number:",
-    tableData: "",
+    title: "Mercedes-Benz C220d",
+    subtitle: "Janez Kovač · Koper",
+    count: "€24,900", 
+    badgeLabel: "Rejected",
+    variant: "success",
   },
   {
     id: 5,
-    tableHeader: "Place of visit:",
-    tableData: "Voklo 49, Šenčur",
+    title: "Škoda Octavia Combi",
+    subtitle: "AutoCenter Kranj · Kranj",
+    count: "€12,800", 
+    badgeLabel: "featured",
+    variant: "info",
   },
 ];
 
-export const municipalData_1 = [
+export const dashboardRegUsersData: DashboardAdminData[] = [
   {
     id: 1,
-    tableLabel: "Working width of the mulcher head: 105 cm",
+    title: "Marko Novak",
+    subtitle: "marko@gmail.com",
+    count: "Individual", 
+    badgeLabel: "Active",
+    variant: "success",
   },
   {
     id: 2,
-    tableLabel: "Reach - arm length: 5 m (measured from the middle of the tractor)",
+    title: "AutoHaus Berlin",
+    subtitle: "info@autohaus.de",
+    count: "Dealer", 
+    badgeLabel: "Active",
+    variant: "success",
   },
   {
     id: 3,
-    tableLabel: "Own weight: approx. 650 - 700 kg",
-  },
-];
-
-export const municipalData_2 = [
-  {
-    id: 1,
-    tableLabel: "Type: knives / mulcher head width 105 cm",
-  },
-  {
-    id: 2,
-    tableLabel: "Front protective chains in front of the mulcher head",
-  },
-  {
-    id: 3,
-    tableLabel: "Rear tractor connection cat II",
+    title: "Ana Horvat",
+    subtitle: "ana.h@gmail.com",
+    count: "Individual", 
+    badgeLabel: "Active",
+    variant: "success",
   },
   {
     id: 4,
-    tableLabel: "Tandem hydraulic pump 60 ltr + 15 ltr",
+    title: "CarPro d.o.o.",
+    subtitle: "sales@carpro.si",
+    count: "Dealer", 
+    badgeLabel: "Active",
+    variant: "success",
   },
   {
     id: 5,
-    tableLabel: "Pump drive via cardan shaft / hydraulic installation independent of the tractor",
+    title: "Janez Kovač",
+    subtitle: "janez.k@gmail.com",
+    count: "Individual", 
+    badgeLabel: "Suspended",
+    variant: "danger",
+  },
+];
+
+export const ListingsTableHeaderData = [
+  {
+    id: 1,
+    tableHeader: "ID",
+  },
+  {
+    id: 2,
+    tableHeader: "Title",
+  },
+  {
+    id: 3,
+    tableHeader: "Price",
+  },
+  {
+    id: 4,
+    tableHeader: "Seller",
+  },
+  {
+    id: 5,
+    tableHeader: "Location",
   },
   {
     id: 6,
-    tableLabel: "Oil tank 100 ltr",
+    tableHeader: "Status",
   },
   {
     id: 7,
-    tableLabel: "Mechanical protection in case of collision",
+    tableHeader: "Posted",
   },
   {
     id: 8,
-    tableLabel: "Self-leveling floating head",
-  },
-  {
-    id: 9,
-    tableLabel: "Lights and road signs",
-  },
-  {
-    id: 10,
-    tableLabel: "Working head turns 200 degrees",
+    tableHeader: "",
   },
 ];
 
-export const municipalData_3 = [
+export const ListingsTableBodyData: ListingAdminData[] = [
   {
-    id: 1,
-    tableLabel: "Electric on / off via joystick",
+    id: "L-1042",
+    title: "BMW 320d Touring",
+    price: "€18,900",
+    seller: "AutoHaus Berlin",
+    type: "user",
+    location: "Ljubljana",
+    status: "Pending",
+    posted: "2026-04-28",
+    variant: "danger"
   },
   {
-    id: 2,
-    tableLabel: "Oil cooler",
+    id: "L-1041",
+    title: "Audi A4 Avant 2.0 TDI",
+    price: "€18,900",
+    seller: "Marko Polo",
+    type: "business",
+    location: "Ljubljana",
+    status: "Pending",
+    posted: "2026-04-28",
+    variant: "danger"
   },
   {
-    id: 3,
-    tableLabel: "Surcharge for HF2 knives 16 pcs / max thickness 5 cm",
+    id: "L-1040",
+    title: "BMW 320d Touring",
+    price: "€18,900",
+    seller: "AutoHaus Berlin",
+    type: "user",
+    location: "Ljubljana",
+    status: "Active",
+    posted: "2026-04-28",
+    variant: "success"
+  },
+  {
+    id: "L-1039",
+    title: "BMW 320d Touring",
+    price: "€18,900",
+    seller: "AutoHaus Berlin",
+    type: "business",
+    location: "Ljubljana",
+    status: "Active",
+    posted: "2026-04-28",
+    variant: "success"
+  },
+  {
+    id: "L-1038",
+    title: "Peugeot 3008 GT Line",
+    price: "€19,400",
+    seller: "Velenje",
+    type: "user",
+    location: "Ljubljana",
+    status: "Sold",
+    posted: "2026-04-28",
+    variant: "secondary"
+  },
+  {
+    id: "L-1039",
+    title: "BMW 320d Touring",
+    price: "€18,900",
+    seller: "AutoHaus Berlin",
+    type: "business",
+    location: "Ljubljana",
+    status: "Active",
+    posted: "2026-04-28",
+    variant: "success"
+  },
+  {
+    id: "L-1038",
+    title: "BMW 320d Touring",
+    price: "€18,900",
+    seller: "AutoHaus Berlin",
+    type: "user",
+    location: "Ljubljana",
+    status: "Pending",
+    posted: "2026-04-28",
+    variant: "danger"
+  },
+  {
+    id: "L-1037",
+    title: "Audi A4 Avant 2.0 TDI",
+    price: "€18,900",
+    seller: "Marko Polo",
+    type: "business",
+    location: "Ljubljana",
+    status: "Pending",
+    posted: "2026-04-28",
+    variant: "danger"
+  },
+  {
+    id: "L-1036",
+    title: "BMW 320d Touring",
+    price: "€18,900",
+    seller: "AutoHaus Berlin",
+    type: "user",
+    location: "Ljubljana",
+    status: "Active",
+    posted: "2026-04-28",
+    variant: "success"
+  },
+  {
+    id: "L-1035",
+    title: "BMW 320d Touring",
+    price: "€18,900",
+    seller: "AutoHaus Berlin",
+    type: "business",
+    location: "Ljubljana",
+    status: "Active",
+    posted: "2026-04-28",
+    variant: "success"
+  },
+  {
+    id: "L-1034",
+    title: "Peugeot 3008 GT Line",
+    price: "€19,400",
+    seller: "Velenje",
+    type: "user",
+    location: "Ljubljana",
+    status: "Sold",
+    posted: "2026-04-28",
+    variant: "secondary"
+  },
+  {
+    id: "L-1033",
+    title: "BMW 320d Touring",
+    price: "€18,900",
+    seller: "AutoHaus Berlin",
+    type: "business",
+    location: "Ljubljana",
+    status: "Active",
+    posted: "2026-04-28",
+    variant: "success"
   },
 ];
 
-export const municipalData_4 = [
+export const ListingsTabData = [
   {
     id: 1,
-    tableLabel: "- HALF -",
+    tab: "All",
+    active: true,
   },
   {
     id: 2,
-    tableLabel: "- THIRD -",
+    tab: "Pending",
+    active: false,
   },
   {
     id: 3,
-    tableLabel: "- QUARTER -",
-  },
-];
-
-export const carCategoryData = [
-  {
-    id: 1,
-    icon: <ModernCar className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Car ads – advanced search",
-  },
-  {
-    id: 2,
-    icon: <ModernCar className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Overview by brand",
-  },
-  {
-    id: 3,
-    icon: <EcoCar className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Eco vehicles",
+    tab: "Active",
+    active: false,
   },
   {
     id: 4,
-    icon: <LuxuryCar className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Luxury vehicles",
+    tab: "Rejected",
+    active: false,
   },
   {
     id: 5,
-    icon: <ClassicCar className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Classic cars",
+    tab: "Featured",
+    active: false,
+  },
+];
+
+export const UsersTableHeaderData = [
+  {
+    id: 1,
+    tableHeader: "User",
+  },
+  {
+    id: 2,
+    tableHeader: "Email",
+  },
+  {
+    id: 3,
+    tableHeader: "Type",
+  },
+  {
+    id: 4,
+    tableHeader: "Listings",
+  },
+  {
+    id: 5,
+    tableHeader: "Status",
   },
   {
     id: 6,
-    icon: <CrashedCar className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Crashed vehicles",
+    tableHeader: "",
+  },
+];
+
+export const UsersTableBodyData: UsersListData[] = [
+  {
+    id: 1,
+    username: "Marko Novak",
+    email : "marko@gmail.com",
+    type: "Individual",
+    listings : 3,
+    status: "Active",
+    variant: "success"
+  },
+  {
+    id: 2,
+    username: "Marko Novak",
+    email : "marko@gmail.com",
+    type: "Dealer",
+    listings : 143,
+    status: "Suspended",
+    variant: "danger"
+  },
+  {
+    id: 3,
+    username: "Marko Novak",
+    email : "marko@gmail.com",
+    type: "Individual",
+    listings : 13,
+    status: "Pending",
+    variant: "warning"
+  },
+  {
+    id: 4,
+    username: "Marko Novak",
+    email : "marko@gmail.com",
+    type: "Dealer",
+    listings : 3,
+    status: "Active",
+    variant: "success"
+  },
+  {
+    id: 5,
+    username: "Marko Novak",
+    email : "marko@gmail.com",
+    type: "Dealer",
+    listings : 3,
+    status: "Active",
+    variant: "success"
+  },
+  {
+    id: 6,
+    username: "Marko Novak",
+    email : "marko@gmail.com",
+    type: "Dealer",
+    listings : 3,
+    status: "Active",
+    variant: "success"
+  },
+];
+
+export const MerchantsTableHeaderData = [
+  {
+    id: 1,
+    tableHeader: "ID",
+  },
+  {
+    id: 2,
+    tableHeader: "Business",
+  },
+  {
+    id: 3,
+    tableHeader: "Owner",
+  },
+  {
+    id: 4,
+    tableHeader: "Email",
+  },
+  {
+    id: 5,
+    tableHeader: "Listings",
+  },
+  {
+    id: 6,
+    tableHeader: "Status",
   },
   {
     id: 7,
-    icon: <CatalogCar className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "New vehicle catalog",
+    tableHeader: "Posted",
   },
   {
     id: 8,
-    icon: <RentalCar className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Rental offers",
-  },
-  {
-    id: 9,
-    icon: <FloodedCar className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Flooded vehicles",
+    tableHeader: "",
   },
 ];
 
-export const carSparePartsData = [
+export const MerchantTableBodyData: UsersListData[] = [
   {
-    id: 1,
-    icon: <CarParts className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Car parts and equipment",
+    id: "MR-1024",
+    title: "Auto Dealer X",
+    username: "John Smith",
+    email: "john@autodealerx.com",
+    listings: 23,
+    status: "Active",
+    variant: "success",
+    posted: "2026-04-28",
   },
   {
-    id: 2,
-    icon: <CarTires className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Tires",
+    id: "MR-1023",
+    title: "Auto Dealer X",
+    username: "John Smith",
+    email: "john@autodealerx.com",
+    listings: 23,
+    status: "Active",
+    variant: "success",
+    posted: "2026-04-28",
   },
   {
-    id: 3,
-    icon: <CarRims className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Rims",
+    id: "MR-1022",
+    title: "Auto Dealer X",
+    username: "John Smith",
+    email: "john@autodealerx.com",
+    listings: 23,
+    status: "Suspended",
+    variant: "danger",
+    posted: "2026-04-28",
+  },
+  {
+    id: "MR-1021",
+    title: "Auto Dealer X",
+    username: "John Smith",
+    email: "john@autodealerx.com",
+    listings: 23,
+    status: "Active",
+    variant: "success",
+    posted: "2026-04-28",
+  },
+  {
+    id: "MR-1020",
+    title: "Auto Dealer X",
+    username: "John Smith",
+    email: "john@autodealerx.com",
+    listings: 23,
+    status: "Active",
+    variant: "success",
+    posted: "2026-04-28",
   },
 ];
 
-export const motoCategoryData = [
+export const PermMerchantsTableHeaderData = [
   {
     id: 1,
-    icon: <Motorcycle className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Motorcycle",
+    tableHeader: "ID",
   },
   {
     id: 2,
-    icon: <Scooter className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Scooter, Maxi-scooter, 3-4 scooter",
+    tableHeader: "Company",
   },
   {
     id: 3,
-    icon: <Mopped className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Moped, motorized bicycle",
+    tableHeader: "Owner",
   },
   {
     id: 4,
-    icon: <FourWheeler className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "4-wheeler, ATV, UTV, 3-wheeler",
+    tableHeader: "Listings",
   },
   {
     id: 5,
-    icon: <MiniByke className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Minibike",
+    tableHeader: "Featured",
   },
   {
     id: 6,
-    icon: <OldTimer className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Oldtimer",
+    tableHeader: "Verification",
   },
   {
     id: 7,
-    icon: <GoKart className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Go-kart",
+    tableHeader: "Posted",
   },
   {
     id: 8,
-    icon: <SnowMobile className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Snowmobile",
-  },
-  {
-    id: 9,
-    icon: <EScooter className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "E-scooter",
-  },
-  {
-    id: 10,
-    icon: <RentalOffer className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Rental offers",
-  },
-  {
-    id: 11,
-    icon: <EBike1 className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "E-Bike",
-  },
-  {
-    id: 12,
-    icon: <EBike2 className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "E-Bike",
+    tableHeader: "",
   },
 ];
 
-export const motoSparePartsData = [
+export const PremMerchantTableBodyData: UsersListData[] = [
   {
-    id: 1,
-    icon: <CarParts className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Motocycle parts and equipment",
+    id: "PM-2201",
+    title: "Elite Motors",
+    username: "Michael Lee",
+    email: "john@autodealerx.com",
+    listings: "Unlimited",
+    status: "Featured",
+    statusVerify: "Verified",
+    variant: "warning",
+    statusVerifyVariant: "success",
+    posted: "2026-04-28",
   },
   {
-    id: 2,
-    icon: <CarTires className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Tires",
+    id: "PM-2202",
+    title: "Elite Motors",
+    username: "Michael Lee",
+    email: "john@autodealerx.com",
+    listings: "Unlimited",
+    status: "Featured",
+    statusVerify: "Verified",
+    variant: "warning",
+    statusVerifyVariant: "success",
+    posted: "2026-04-28",
   },
   {
-    id: 3,
-    icon: <CarRims className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Rims",
+    id: "PM-2203",
+    title: "Elite Motors",
+    username: "Michael Lee",
+    email: "john@autodealerx.com",
+    listings: "Unlimited",
+    status: "Featured",
+    statusVerify: "Verified",
+    variant: "warning",
+    statusVerifyVariant: "success",
+    posted: "2026-04-28",
+  },
+  {
+    id: "PM-2204",
+    title: "Elite Motors",
+    username: "Michael Lee",
+    email: "john@autodealerx.com",
+    listings: "Unlimited",
+    status: "Featured",
+    statusVerify: "Verified",
+    variant: "warning",
+    statusVerifyVariant: "success",
+    posted: "2026-04-28",
   },
 ];
 
-export const economicCategoryData = [
+export const FiltersTableHeaderData = [
   {
     id: 1,
-    icon: <DeliveryTruck className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Delivery vehicles",
+    tableHeader: "Filter Name",
   },
   {
     id: 2,
-    icon: <Trucks className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Trucks",
+    tableHeader: "Type",
   },
   {
     id: 3,
-    icon: <Buses className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Buses",
+    tableHeader: "Options",
   },
   {
     id: 4,
-    icon: <Cargo className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Cargo trailers",
+    tableHeader: "Assigned To",
   },
   {
     id: 5,
-    icon: <UTV className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "UTV vehicles",
-  },
-  {
-    id: 6,
-    icon: <RentalOffer className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Rental offers",
+    tableHeader: "",
   },
 ];
 
-export const economicSparePartsData = [
+export const FilersTableBodyData = [
   {
     id: 1,
-    icon: <Containers className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Containers",
+    name: "Elite Motors",
+    type: "Select",
+    options: 42,
+    assigned: "Cars",
   },
   {
     id: 2,
-    icon: <CarParts className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Motocycle parts and equipment",
+    name: "Elite Motors",
+    type: "Select",
+    options: 72,
+    assigned: "All",
   },
   {
-    id: 3,
-    icon: <CarTires className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Tires",
-  },
-];
-
-export const mechanizationCategoryData = [
-  {
-    id: 1,
-    icon: <Machinery className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Construction machinery",
-  },
-  {
-    id: 2,
-    icon: <FarmMachine className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Agricultural machinery",
-  },
-  {
-    id: 3,
-    icon: <ForkLifts className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Forklifts",
+    name: "Elite Motors",
+    type: "Select",
+    options: 14,
+    assigned: "Cars",
   },
   {
     id: 4,
-    icon: <Troller className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Forestry machinery",
-  },
-  {
-    id: 5,
-    icon: <MunicipalMachine className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Municipal machinery",
-  },
-  {
-    id: 6,
-    icon: <RentalOffer className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Rental offers",
+    name: "Elite Motors",
+    type: "Select",
+    options: 63,
+    assigned: "All",
   },
 ];
 
-export const mechanizationSparePartsData = [
+export const TransTableHeaderData = [
   {
     id: 1,
-    icon: <Machinery className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "For agricultural machinery",
+    tableHeader: "ID",
   },
   {
     id: 2,
-    icon: <FarmMachine className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "For agricultural machinery",
+    tableHeader: "User",
   },
   {
     id: 3,
-    icon: <Troller className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Cargo trailers",
-  },
-];
-
-export const freeTimeCategoryData = [
-  {
-    id: 1,
-    icon: <Machinery className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Motorhome",
-  },
-  {
-    id: 2,
-    icon: <FarmMachine className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Holiday trailer",
-  },
-  {
-    id: 3,
-    icon: <ForkLifts className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Mobile home",
+    tableHeader: "Listing / Item",
   },
   {
     id: 4,
-    icon: <Troller className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Removable lounger",
+    tableHeader: "Featured",
   },
   {
     id: 5,
-    icon: <MunicipalMachine className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Tent trailer",
+    tableHeader: "Status",
   },
   {
     id: 6,
-    icon: <RentalOffer className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Rental offers",
+    tableHeader: "Posted",
   },
   {
     id: 7,
-    icon: <Troller className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Nautical",
-  },
-  {
-    id: 8,
-    icon: <MunicipalMachine className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "bike",
-  },
-  {
-    id: 9,
-    icon: <RentalOffer className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "E-scooter",
+    tableHeader: "",
   },
 ];
 
-export const freeTimeSparePartsData = [
+export const TransTableBodyData: ListingAdminData[] = [
   {
-    id: 1,
-    icon: <Machinery className="fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    subcategory: "Camping equipment",
+    id: "T-9821",
+    title: "AutoHaus Berlin",
+    type: "BMW 320d Touring",
+    price: "€49",
+    status: "Paid",
+    variant: "success",
+    posted: "2026-04-28", 
+  },
+  {
+    id: "T-9822",
+    title: "AutoHaus Berlin",
+    type: "BMW 320d Touring",
+    price: "€120",
+    status: "Pending",
+    variant: "success",
+    posted: "2026-04-28", 
+  },
+  {
+    id: "T-9823",
+    title: "AutoHaus Berlin",
+    type: "BMW 320d Touring",
+    price: "€149",
+    status: "Refunded",
+    variant: "success",
+    posted: "2026-04-28", 
+  },
+  {
+    id: "T-9824",
+    title: "AutoHaus Berlin",
+    type: "BMW 320d Touring",
+    price: "€149",
+    status: "Refunded",
+    variant: "success",
+    posted: "2026-04-28", 
+  },
+  {
+    id: "T-9825",
+    title: "AutoHaus Berlin",
+    type: "BMW 320d Touring",
+    price: "€149",
+    status: "Refunded",
+    variant: "success",
+    posted: "2026-04-28", 
   },
 ];
 
-export const userDashboardTabsMenu = [
+export const TransCardsData = [
   {
     id: 1,
-    icon: <Home_Icon className="w-[15px] h-[18px] group-hover:fill-[#253A86]" />,
-    path: "/"
+    title: "Revenue (period)",
+    count: "€488",
   },
   {
     id: 2,
-    label: "Ad overview",
-    path: "/ad-overview"
+    title: "Pending",
+    count: "€19",
   },
   {
     id: 3,
-    label: "Post an ad",
-    path: "/post-add-user"
-  },
-  {
-    id: 4,
-    label: "Archive",
-    path: "/archive-user"
-  },
-  {
-    id: 5,
-    label: "Statistics",
-    path: "/statistics-user"
-  },
-  {
-    id: 6,
-    label: "Parked",
-    path: "/parked-user"
-  },
-  {
-    id: 7,
-    label: "Contacts",
-    path: "/edit-user-data"
-  },
-  {
-    id: 8,
-    label: "back to Kolica",
-    path: "/"
-  },
-];
-
-export const productListingDetails = [
-  {
-    id: 1,
-    image: Car1,
-    heading: "Forthing U-Tour 1.5T ADA.",
-    list: [
-      { label: "registrationYear", value: "Year of first registration: 2024" },
-      { label: "mileage", value: "20140 km" },
-      { label: "engineSpecs", value: "Petrol Engine, 1332 cc, 100 kW / 136 hp" },
-      { label: "transmission", value: "Automatic transmission" },
-    ],
-    mainPrice: "€15,970",
-    discountedPrice: "or €13,090 + VAT",
-    fromDate: "22.3.2026 18:43:00",
-    toDate: "20.4.2026 10:50:00",
-    stockAge: "37",
-  },
-  {
-    id: 2,
-    image: Car2,
-    heading: "Forthing U-Tour 1.5T ADA.",
-    list: [
-      { label: "registrationYear", value: "Year of first registration: 2024" },
-      { label: "mileage", value: "20140 km" },
-      { label: "engineSpecs", value: "Petrol Engine, 1332 cc, 100 kW / 136 hp" },
-      { label: "transmission", value: "Automatic transmission" },
-    ],
-    mainPrice: "€15,970",
-    discountedPrice: "or €13,090 + VAT",
-    fromDate: "22.3.2026 18:43:00",
-    toDate: "20.4.2026 10:50:00",
-    stockAge: "17",
-  },
-  {
-    id: 3,
-    image: Car3,
-    heading: "Forthing U-Tour 1.5T ADA.",
-    list: [
-      { label: "registrationYear", value: "Year of first registration: 2024" },
-      { label: "mileage", value: "20140 km" },
-      { label: "engineSpecs", value: "Petrol Engine, 1332 cc, 100 kW / 136 hp" },
-      { label: "transmission", value: "Automatic transmission" },
-    ],
-    mainPrice: "€15,970",
-    discountedPrice: "or €13,090 + VAT",
-    fromDate: "22.3.2026 18:43:00",
-    toDate: "20.4.2026 10:50:00",
-    stockAge: "15",
-  },
-  {
-    id: 4,
-    image: "",
-    heading: "Forthing U-Tour 1.5T ADA.",
-    list: [
-      { label: "registrationYear", value: "Year of first registration: 2024" },
-      { label: "mileage", value: "20140 km" },
-      { label: "engineSpecs", value: "Petrol Engine, 1332 cc, 100 kW / 136 hp" },
-      { label: "transmission", value: "Automatic transmission" },
-    ],
-    mainPrice: "€15,970",
-    discountedPrice: "or €13,090 + VAT",
-    fromDate: "22.3.2026 18:43:00",
-    toDate: "20.4.2026 10:50:00",
-    stockAge: "30",
-  },
-  {
-    id: 5,
-    image: Car5,
-    heading: "Forthing U-Tour 1.5T ADA.",
-    list: [
-      { label: "registrationYear", value: "Year of first registration: 2024" },
-      { label: "mileage", value: "20140 km" },
-      { label: "engineSpecs", value: "Petrol Engine, 1332 cc, 100 kW / 136 hp" },
-      { label: "transmission", value: "Automatic transmission" },
-    ],
-    mainPrice: "€15,970",
-    discountedPrice: "or €13,090 + VAT",
-    fromDate: "22.3.2026 18:43:00",
-    toDate: "20.4.2026 10:50:00",
-    stockAge: "48",
-  },
-];
-
-export const merchantListingData = [
-  {
-    id: 1,
-    label: "Merchant",
-    image: GlobTrade,
-    list: [
-      { label: "brand", value: "S-AVTO, Zan Guzej sp" },
-      { label: "medium", value: "Vehicle purchase and sale" },
-      { label: "variant", value: "DVOR 12A" },
-      { label: "type", value: "Smarje pri Jelsah" },
-    ],
-    link: "view website...",
-    card_subHeader: "The dealer's entire offer:",
-    card_subHeaderText: "Categories",
-    inner_list: [
-      { label: "Car", value: "18" },
-      { label: "Moped, Motorcycle", value: "1" },
-      { label: "Rim", value: "1" },
-    ],
-  },
-];
-
-export const adsListingData = [
-  {
-    id: 1,
-    label: "Showing 18 ads",
-    adsDesc: "AUTO Section",
-    card_subHeader: "Limit Display:",
-    specs: [
-      {
-        innerHeading: "Offer type",
-        innerListing: [
-          { label: "sale", value: "18" },
-        ]
-      },
-      {
-        innerHeading: "Brand",
-        innerListing: [
-          { label: "BMW", value: "2" },
-          { label: "Citroen", value: "1" },
-          { label: "Flat", value: "1" },
-          { label: "Hyndai", value: "1" },
-          { label: "Mercedes-Benz", value: "2" },
-          { label: "Suzuki", value: "1" },
-          { label: "Damage", value: "1" },
-          { label: "Volkswagen", value: "9" },
-        ]
-      },
-      {
-        innerHeading: "Shape",
-        innerListing: [
-          { label: "limousine", value: "2" },
-        ]
-      },
-    ],
-  },
-];
-
-export const searchListingData = [
-  {
-    id: 1,
-    label: "Quick search by ID or VIN",
-    buttonLabel: "Show ad",
-  },
-];
-
-export const reviewMyAdsData = [
-  {
-    icon: <ModernCar className="w-10 h-10 fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    label: "Car",
-    count: "18"
-  },
-  {
-    icon: <Mopped className="w-10 h-10 fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    label: "Moped Motorcycle",
-    count: "1"
-  },
-  {
-    icon: <CarRims className="w-10 h-10 fill-current text-[#7E9DB8] group-hover:text-[#253A86]" />,
-    label: "Rims",
-    count: "1"
-  },
-]
-
-export const userDashboardData = [
-  {
-    merchantID: "20943",
-    website: "my.Kolica.net"
-  },
-]
-
-export const editUserData = [
-  {
-    id: 1,
-    label: "User Data",
-    field: [
-      {
-        icon: <i className={`fa fa-info-circle`} aria-hidden="true"></i>,
-        field_desc: `An icon for additional comments may be displayed next to certain input fields. 
-                The comment appears when you hover your mouse over the selected icon.`,
-      },
-      {
-        icon: <i className={`fa fa-asterisk`} aria-hidden="true"></i>,
-        label: "Example",
-        name: "Example-1",
-        field_desc: `Required fields are additionally marked/colored.`,
-        field_input: true
-      },
-      {
-        icon: <i className={`fa fa-asterisk`} aria-hidden="true"></i>,
-        label: "Example",
-        name: "Example-2",
-        field_desc: `When you nake a mistake while entering data. It will be highlighted in red.`,
-        field_input: true
-      }
-    ],
-  },
-];
-
-export const userData = [
-  {
-    id: 1,
-    label: "Basic data about the trader (source: AJPES - Business Register of Siovenia)",
-    list: [
-      { label: "Title", value: "S-AVTO, Zan Guzej sp" },
-      { label: "Address", value: "Courtyard 12A" },
-      { label: "Post Office, City", value: "3240 Smarje Pri Jeisah" },
-      { label: "Tax number", value: "12710717" },
-    ],
-    card_subHeader: "Subscription relationship",
-    subHeader_list: [
-      { label: "Contact Person", value: "ZAN GUZEJ" },
-      { label: "Contact Email", value: "guzej12@gmail.com" },
-      { label: "Contact Phone", value: "041787993" },
-    ],
-  },
-];
-
-export const userInfoEdit = [
-  {
-    id: 1,
-    label: "Information that will be published with your offer",
-    list: [
-      { label: "Title", value: "S-AVTO, Zan Guzej sp", field_input: false },
-      { label: "Branch name", name: "branchName", field_input: true },
-      { label: "Address", name: "address", field_input: true },
-      { label: "Post Office, City", name: "city", field_input: true },
-    ],
-    card_subHeader: "Contact Information",
-    subHeader_list: [
-      { label: "Phone", name: "phone", field_input: true },
-      { label: "Comment", name: "comment", field_input: true },
-      { label: "Fax", name: "fax", field_input: true },
-      { label: "Email", name: "email", field_input: true },
-      { label: "Website", name: "website", field_input: true },
-    ],
-  },
-];
-
-const hoursData = ["0", "1", "2", "3", "4", "5", "6", "7", "8"];
-
-export const userWorkingHours = [
-  {
-    id: 1,
-    label: "Working Hours",
-    list: [
-      { id: 1, label: "Activation", field_select: false, field_checkbox: true },
-      { id: 2, label: "Monday", data: hoursData, field_select: true },
-      { id: 3, label: "Tuesday", data: hoursData, field_select: true },
-      { id: 4, label: "Wednesday", data: hoursData, field_select: true },
-      { id: 5, label: "Thursday", data: hoursData, field_select: true },
-      { id: 6, label: "Friday", data: hoursData, field_select: true },
-      { id: 7, label: "Saturday", data: hoursData, field_select: true },
-      { id: 8, label: "Sunday", data: hoursData, field_select: true },
-      { id: 9, label: "Comment on the schedule", field_select: false, field_textArea: true },
-    ],
-  },
-];
-
-export const userPrintModeData = [
-  {
-    id: 1,
-    label: 'Set the default A4 print mode for "Windows sticker"',
-    list: [
-      { id: 101, label: "A4 + QR code", name: "window", field_radio: true },
-      { id: 201, label: "A4 + QR code (no price)", name: "window", field_radio: true },
-      { id: 301, label: "A4 - portrait", name: "window", field_radio: true },
-      { id: 401, label: "A4 - landscape", name: "window", field_radio: true },
-      { id: 501, label: "A4 + notes", name: "window", field_radio: true },
-      { id: 601, label: "A4 + photos", name: "window", field_radio: true },
-      { id: 701, label: "Old printout layout", name: "window", field_radio: true },
-    ],
-    card_subHeader: 'Set the default add sorting method in the administration',
-    subHeader_list: [
-      { id: 801, label: "by brand: A to Z", name: "admin", field_radio: true },
-      { id: 901, label: "by brand: Z to A", name: "admin", field_radio: true },
-      { id: 105, label: "by price: cheaper first", name: "admin", field_radio: true },
-      { id: 115, label: "by price: most expensive first", name: "admin", field_radio: true },
-      { id: 125, label: "older ads first", name: "admin", field_radio: true },
-      { id: 135, label: "newer ads first", name: "admin", field_radio: true },
-      { id: 145, label: "by year: older first", name: "admin", field_radio: true },
-      { id: 155, label: "by year: newer first", name: "admin", field_radio: true },
-      { id: 165, label: "by edit date: oldest first", name: "admin", field_radio: true },
-      { id: 175, label: "by edit date: newer first", name: "admin", field_radio: true },
-    ],
-  },
-];
-
-export const userSysLoginInfo = [
-  {
-    id: 1,
-    label: "System Login Information",
-    list: [
-      {
-        label: "Email",
-        name: "email",
-        field_input: true,
-        icon: <i className={`fa fa-info-circle`} aria-hidden="true"></i>,
-      },
-      {
-        label: "Password",
-        name: "password",
-        field_input: true,
-        icon: <i className={`fa fa-info-circle`} aria-hidden="true"></i>,
-      },
-    ],
-  },
-];
-
-export const businessSignUpData = [
-  {
-    id: 1,
-    package_name: 'INDIVIDUAL',
-    package_price: '0',
-    package_duration: 'for an ad',
-    list: [
-      {
-        id: 1,
-        point: "Post a FREE ad (*)"
-      },
-      {
-        id: 2,
-        point: "PARKING popular ads"
-      },
-      {
-        id: 3,
-        point: "PARKING search criteria"
-      },
-      {
-        id: 4,
-        point: "Possibility of advertising exposure (*additional cost option)"
-      },
-      {
-        id: 5,
-        point: "A4 + QR code"
-      },
-    ],
-    navigate_link: 'individual',
-    package_details: `(*) Suitable exclusively for natural persons (individuals) who want to sell their own vehicle. In order to avoid illegal work, the number of free ads is limited to a maximum of 2 free ads per month or 2 unpaid ads at the same time. Free ads are only available in unpaid sections, and for users with successful SMS validation of the contact phone number.`
-  },
-  {
-    id: 2,
-    package_name: 'LEGAL ENTITY',
-    package_price: '10',
-    package_duration: 'per ad',
-    list: [
-      {
-        id: 1,
-        point: "Publication of an individual advertisement for the sale of a fixed asset (*)"
-      },
-      {
-        id: 2,
-        point: "Possibility to publish prices excluding VAT"
-      },
-      {
-        id: 3,
-        point: "PARKING popular ads"
-      },
-      {
-        id: 4,
-        point: "PARKING search criteria"
-      },
-      {
-        id: 5,
-        point: "Possibility of advertising exposure (*additional cost option)"
-      },
-    ],
-    navigate_link: 'legal_entity',
-    package_details: `(*) Suitable exclusively for companies or individuals who carry out an activity and want to sell their own fixed asset.`
-  },
-  {
-    id: 3,
-    package_name: 'TRADER',
-    package_price: '59',
-    package_duration: '+ vat per month',
-    list: [
-      {
-        id: 1,
-        point: "Posting ads as a legal entity - merchant(*)"
-      },
-      {
-        id: 2,
-        point: "Possibility to publish prices excluding VAT"
-      },
-      {
-        id: 3,
-        point: "FREE 30 day trial period"
-      },
-      {
-        id: 4,
-        point: "Advanced ad posting options (*optional)"
-      },
-      {
-        id: 5,
-        point: "Statistical overview of the publication (*optional)"
-      },
-    ],
-    navigate_link: 'trader',
-    package_details: `(*) Suitable for all legal entities (ltd, sole proprietors, societies, institutes, associations, agencies...) that wish to advertise the sale or rental of vehicles, motorcycles, machinery or spare parts and equipment, within the framework of a registered activity.`
-  },
-];
-
-export const PostNewAdData = [
-  {
-    id: 1,
-    list: [
-      {
-        id: 1,
-        point: "When you want to post a FREE ad (*)"
-      },
-      {
-        id: 2,
-        point: "To SAVE your search CRITERIA"
-      },
-      {
-        id: 3,
-        point: "Option to PARK your favorite ads"
-      },
-      {
-        id: 4,
-        point: "Possibility to PARK your favorite search criteria"
-      },
-    ],
-    package_details_list: [
-      {
-        id: 1,
-        point: `(*) Suitable for natural persons / individuals who want to sell their own vehicle, machinery or equipment.`,
-      },
-      {
-        id: 2,
-        point: `Free advertising is only available in non-paying sections, and for users with successful SMS validation of the contact phone number.`,
-      },
-      {
-        id: 3,
-        point: `The number of free ads is limited to a maximum of 2 free ads per month or a maximum of 2 ads at the same time to avoid illegal work.`,
-      },
-    ],
-  },
-];
-
-export const basicInfoIndividual = [
-  {
-    id: 1,
-    label: "Name",
-    name: "Name",
-    input_field: true,
-    placeholder: "This information is mandatory, but will NOT be published when the ads are published.",
-  },
-  {
-    id: 2,
-    label: "Last name",
-    name: "LastName",
-    input_field: true,
-    placeholder: "This information is mandatory, but will NOT be published when the ads are published.",
-  },
-  {
-    id: 3,
-    label: "Country",
-    name: "Country",
-    dropDownCount: 1,
-    input_select: true,
-    select_placeholder: "Select Country",
-    options: [
-      'USA',
-      'UK',
-      'PAK',
-      'IND',
-      'AUS',
-      'MAL',
-      'SL',
-      'NY',
-      'ZM',
-      'NZ',
-    ]
-  },
-  {
-    id: 4,
-    label: "Post office or place",
-    name: "PostOffice",
-    dropDownCount: 1,
-    input_select: true,
-    select_placeholder: "Select Post office or place",
-    options: [
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-    ]
-  },
-  {
-    id: 5,
-    label: "Street",
-    name: "Street",
-    input_field: true,
-    placeholder: "This information is mandatory, but will NOT be published when the ads are published.",
-  },
-  {
-    id: 6,
-    label: "House number",
-    name: "HouseNo",
-    input_field: true,
-    placeholder: "This information is mandatory, but will NOT be published when the ads are published.",
-  },
-  {
-    id: 7,
-    input_field: false,
-    input_select: false,
-    label: "",
-    name: "Note",
-    Note: "Basic data (name and surname, street) are used only for the purposes of complying with the provisions of Article 6 of the ZPDZC, and WILL NOT be published with the advertisement.",
-  },
-];
-
-export const contactInfoIndividual = [
-  {
-    id: 1,
-    label: "Seller name:",
-    name: "SellerName",
-    input_select: true,
-    select_placeholder: "information is not mandatory",
-    options: [
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-    ]
-  },
-  {
-    id: 2,
-    label: "Phone",
-    name: "Phone",
-    showInline: true,
-    input_select: true,
-    select_placeholder: "Any",
-    options: [
-      "040 / 275 - 866",
-      "031 / 480 - 648",
-      "041 / 27980- 100",
-      "040 / 275 - 866",
-      "041 / 208 - 568",
-      "031 / 480 - 648",
-    ]
-  },
-  {
-    id: 3,
-    label: "Details",
-    name: "Details",
-    showInline: true,
-    input_field: true,
-    placeholder: "This information is mandatory, but will NOT be published when the ads are published.",
-  },
-  {
-    id: 4,
-    label: "Email address:",
-    name: "Email",
-    input_field: true,
-    placeholder: "This information is mandatory, but will NOT be published when the ads are published.",
-  },
-];
-
-export const PostNewAdLegalEntityData = [
-  {
-    id: 1,
-    list: [
-      {
-        id: 1,
-        point: "When you want to post an ad for the sale of a fixed asset (*)"
-      },
-      {
-        id: 2,
-        point: "Possibility to publish prices excluding VAT"
-      },
-      {
-        id: 3,
-        point: "To SAVE your search CRITERIA"
-      },
-      {
-        id: 4,
-        point: "Option to PARK your favorite ads"
-      },
-      {
-        id: 5,
-        point: "Possibility to PARK your favorite search criteria"
-      },
-    ],
-    package_details_list: [
-      {
-        id: 1,
-        point: `(*) Suitable exclusively for companies or natural persons who carry out an activity, are registered in Slovenia, and want to sell their own fixed asset.`,
-      },
-    ],
-  },
-];
-
-export const basicInfoLegalEntity = [
-  {
-    id: 1,
-    label: "Official name",
-    name: "OfficialName",
-    input_field: true,
-    placeholder: "This information is mandatory, but will NOT be published when the ads are published.",
-  },
-  {
-    id: 2,
-    label: "Tax number",
-    name: "TaxNo",
-    input_field: true,
-    placeholder: "This information is mandatory, but will NOT be published when the ads are published.",
-  },
-];
-
-export const passwordsLegalEntity = [
-  {
-    id: 1,
-    label: "Your password:",
-    name: "Password",
-    input_field: true,
-    placeholder: "***********",
-  },
-  {
-    id: 2,
-    label: "Repeat password:",
-    name: "confirmPassword",
-    input_field: true,
-    placeholder: "***********",
-  },
-];
-
-export const importantLegalEntity = [
-  {
-    id: 1,
-    notice: `A significant advantage of registration is the ability to publish an advertisement for the 
-      sale of a fixed asset. In order to avoid violations of the Unlawful Employment and Work Prevention 
-      Act (ZPDZC), it is necessary to enter information about the advertiser when registering. 
-      This information is only used to comply with the provisions of Article 6 of the ZPDZC, and WILL 
-      NOT be published with the advertisement.`,
-    list: [
-      {
-        id: 1,
-        label: "I declare that in the event of publishing an advertisement, I am selling my own fixed asset, and that the order to publish will not advertise illegal work within the meaning of the ZPDZC , or advertising activities.",
-        name: "declaration"
-      },
-      {
-        id: 2,
-        label: "I confirm that I have read and fully agree with the content of the legal notice.",
-        name: "confirmation"
-      },
-      {
-        id: 3,
-        label: "I want to receive comments and offers from visitors to my e-mail address.",
-        name: "aggregation"
-      },
-    ],
-  },
-];
-
-export const PostNewAdTraderData = [
-  {
-    id: 1,
-    list: [
-      {
-        id: 1,
-        point: "Posting an ad as a legal entity (*)"
-      },
-      {
-        id: 2,
-        point: "Possibility to publish prices excluding VAT"
-      },
-      {
-        id: 3,
-        point: "Free 30 day trial period"
-      },
-      {
-        id: 4,
-        point: "Advanced ad posting options (* optional)"
-      },
-      {
-        id: 5,
-        point: "Statistical overview of the publication (*optional)"
-      },
-    ],
-    package_details_list: [
-      {
-        id: 1,
-        point: `(*) Suitable for all legal entities (ltd, sole proprietors, societies, institutes, associations, agencies...) that wish to advertise the sale or rental of vehicles, motorcycles, machinery or spare parts and equipment, within the framework of a registered activity.`,
-      },
-    ],
-  },
-];
-
-export const importantTrader = [
-  {
-    id: 1,
-    notice: `When applying for registration, we ask that you also provide us with a signed or stamped copy of the official document confirming the registration of the company or joint stock company (source: AJPES).
-      You can send a copy of the document to the emailtrgovci@kolica.net.`,
-    list: [
-      {
-        id: 1,
-        label: "In accordance with the provisions of Article 6 of the Act on the Prevention of Illegal Work and Employment (ZPDZC-1, Official Gazette of the Republic of Slovenia No. 32/2014), we declare that our activity, the content of which refers to the publication of advertisements, is defined in the founding act or entered in the register.",
-        name: "declaration"
-      },
-      {
-        id: 2,
-        label: "I confirm that I have read and fully agree with the content of the legal notice.",
-        name: "confirmation"
-      },
-      {
-        id: 3,
-        label: "I want to receive comments and offers from visitors to my e-mail address.",
-        name: "aggregation"
-      },
-    ],
-  },
-];
-
-export const contactInfoTrader = [
-  {
-    id: 1,
-    label: "Branch name:",
-    name: "BranchName",
-    input_select: true,
-    select_placeholder: "information is not mandatory",
-    options: [
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-    ]
-  },
-  {
-    id: 2,
-    label: "Phone",
-    name: "Phone",
-    showInline: true,
-    input_select: true,
-    select_placeholder: "Any",
-    options: [
-      "040 / 275 - 866",
-      "031 / 480 - 648",
-      "041 / 27980- 100",
-      "040 / 275 - 866",
-      "041 / 208 - 568",
-      "031 / 480 - 648",
-    ]
-  },
-  {
-    id: 3,
-    label: "Details",
-    name: "Details",
-    showInline: true,
-    input_field: true,
-    placeholder: "This information is mandatory, but will NOT be published when the ads are published.",
-  },
-  {
-    id: 4,
-    label: "Email address:",
-    name: "Email",
-    input_field: true,
-    placeholder: "This information is mandatory, but will NOT be published when the ads are published.",
-  },
-  {
-    id: 5,
-    label: "Website",
-    name: "Website",
-    input_field: true,
-    placeholder: "This information is mandatory",
-  },
-];
-
-export const basicInfoTrader = [
-  {
-    id: 1,
-    label: "Official title",
-    name: "OfficialTitle",
-    input_field: true,
-    placeholder: "This information is mandatory.",
-  },
-  {
-    id: 2,
-    label: "Tax number",
-    name: "TaxNo",
-    input_field: true,
-    placeholder: "This information is mandatory.",
-  },
-  {
-    id: 3,
-    label: "Contact person",
-    name: "ContactPerson",
-    input_field: true,
-    placeholder: "This information is mandatory.",
-  },
-  {
-    id: 4,
-    label: "Country",
-    name: "Country",
-    dropDownCount: 1,
-    input_select: true,
-    select_placeholder: "Select Country",
-    options: [
-      'USA',
-      'UK',
-      'PAK',
-      'IND',
-      'AUS',
-      'MAL',
-      'SL',
-      'NY',
-      'ZM',
-      'NZ',
-    ]
-  },
-  {
-    id: 5,
-    label: "Post office or place",
-    name: "PostOffice",
-    dropDownCount: 1,
-    input_select: true,
-    select_placeholder: "Select Post office or place",
-    options: [
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-      "Lorem Ipsum",
-    ]
-  },
-  {
-    id: 6,
-    label: "Street",
-    name: "Street",
-    input_field: true,
-    placeholder: "This information is mandatory.",
-  },
-  {
-    id: 7,
-    label: "Address",
-    name: "Address",
-    input_field: true,
-    placeholder: "This information is mandatory.",
+    title: "Refunded",
+    count: "€120",
   },
 ];

@@ -27,6 +27,18 @@ export interface LabelProps {
 export interface NavbarProps {
   className?: string;
   logStatus?: boolean;
+  setOpen?: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export interface SidebarProps {
+  className?: string;
+  logStatus?: boolean;
+  open?: boolean;
+  setOpen?: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export interface DashboardLayoutProps {
+  children?: React.ReactNode;
 }
 
 export interface FAQProps {
@@ -191,6 +203,8 @@ export interface DashboardProps {
   cardHeaderText?: string;
   cardFooterText?: string | React.ReactNode;
   cardBodyIcon?: ReactNode;
+  pre?: ReactNode;
+  badgeIcon?: ReactNode;
   cardBodyHeading?: string;
   cardBodySubHeading?: string;
   className?: string;
@@ -269,4 +283,49 @@ export type FormCheckBoxesProps = {
     notice: string;
     list?: { id: number; label: string; name: string; }[];
   }[];
+};
+
+type BadgeVariant =
+  | "info"
+  | "success"
+  | "warning"
+  | "primary"
+  | "secondary"
+  | "danger";
+
+export type DashboardAdminData = {
+  id: number;
+  revenue?: number;
+  icon?: React.ReactNode;
+  title: string;
+  subtitle?: string;
+  count?: string;
+  badgeLabel?: string;
+  variant: BadgeVariant;
+};
+
+export type ListingAdminData = {
+  id: string | number;
+  title?: string;
+  price?: string;
+  seller?: string;
+  type?: string;
+  location?: string;
+  status?: string;
+  posted?: string;
+  variant: BadgeVariant;
+};
+
+export type UsersListData = {
+  id: string | number;
+  title?: string;
+  username?: string;
+  email?: string;
+  type?: string;
+  listings?: string | number;
+  status?: string;
+  statusVerify?: string;
+  statusVerifyVariant?: BadgeVariant;
+  posted?: string;
+  variant: BadgeVariant;
 };
