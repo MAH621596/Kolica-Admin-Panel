@@ -22,7 +22,7 @@ const Navbar = ({
         px-4 lg:px-8 
         py-3 lg:py-5 
         flex 
-        item-center 
+        items-center 
         justify-between 
         lg:ml-auto
         

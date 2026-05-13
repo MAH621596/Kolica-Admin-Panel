@@ -84,8 +84,8 @@ const Dashboard = () => {
                 <h2 className="font-semibold text-base md:text-2xl leading-tight p-5">
                   Latest Listings</h2>
                 {dashboardListingData.map((card) => (
-                  <div key={card.id} className="flex item-center justify-between gap-4 p-5 border-b border-[#C8C8C8] last:border-0">
-                    <div className="flex flex-col items-start gap-0">
+                  <div key={card.id} className="flex flex-col sm:flex-row items-center justify-between gap-4 p-5 border-b border-[#C8C8C8] last:border-0">
+                    <div className="flex flex-col items-center sm:items-start gap-0">
                       <h5 className="font-semibold text-base leading-tight text-[#0F1729]">{card.title}</h5>
                       <h6 className="font-normal text-sm leading-tight text-[#161819]">{card.subtitle}</h6>
                     </div>
@@ -130,8 +130,8 @@ const Dashboard = () => {
               <h2 className="font-semibold text-base md:text-2xl leading-tight p-5">
                 Recently Registered Users</h2>
               {dashboardRegUsersData.map((card) => (
-                <div key={card.id} className="flex item-center justify-between gap-4 p-5 border-b border-[#C8C8C8] last:border-0">
-                  <div className="flex flex-col items-start gap-0">
+                <div key={card.id} className="flex flex-col sm:flex-row items-center justify-between gap-4 p-5 border-b border-[#C8C8C8] last:border-0">
+                  <div className="flex flex-col items-center sm:items-start gap-0">
                     <h5 className="font-semibold text-base leading-tight text-[#0F1729]">{card.title}</h5>
                     <h6 className="font-normal text-sm leading-tight text-[#161819]">{card.subtitle}</h6>
                   </div>

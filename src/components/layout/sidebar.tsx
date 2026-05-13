@@ -49,7 +49,7 @@ const Sidebar = ({
         <div className="flex items-center justify-between px-10 py-5 mb-5 w-full">
 
           {/* Logo */}
-          <Link to="https://kolica-landing-page.web.app">
+          <Link to="/">
             <img src={Logo} alt="logo" className="w-[104px] h-[38px]" />
           </Link>
 
@@ -70,10 +70,11 @@ const Sidebar = ({
           </div>
         </div>
 
-        {/* Links */}
-        <div className="flex flex-col gap-6 items-start px-10 py-6 w-full h-full max-h-[430px] overflow-y-auto">
+        {/* Links */} 
+        <div className="flex flex-col gap-6 items-start px-10 py-6 w-full h-full overflow-y-auto max-h-[calc(100vh-180px)] lg:max-h-[430px]">
           {navbarLinks.map((link, index) => {
-            const isActive = location.pathname === link.href;
+            const isActive = location.pathname === link.href ||
+            (location.pathname === "/" && link.href === "/dashboard");
 
             return (
               <span key={index} onClick={() => handleClick(link.href)}

@@ -1,10 +1,11 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { Dashboard, Listings, Users, Merchants, PermiumMerchants, Filters, Transactions } from "@/pages";
 
 function App() {
   return (
       <Routes>
-        <Route path="/" element={<Dashboard />} />
+        <Route path="/" element={<Navigate to="/dashboard" replace />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/users" element={<Users />} />
         <Route path="/filters" element={<Filters />} />
         <Route path="/listings" element={<Listings />} />
