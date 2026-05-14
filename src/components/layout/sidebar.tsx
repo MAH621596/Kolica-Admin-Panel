@@ -36,6 +36,9 @@ const Sidebar = ({
         top-0
         left-0
         z-50
+            flex flex-col
+    overflow-hidden
+    
         transition-transform
         duration-300
         ease-in-out
@@ -44,14 +47,16 @@ const Sidebar = ({
         ${className}`}>
 
       {/* Top bar */}
-      <div className="flex flex-col items-start justify-center gap-4 w-full">
+      <div className="flex flex-col h-full w-full">
 
         <div className="flex items-center justify-between px-10 py-5 mb-5 w-full">
 
           {/* Logo */}
-          <Link to="/">
-            <img src={Logo} alt="logo" className="w-[104px] h-[38px]" />
-          </Link>
+          <div className="shrink-0">
+            <Link to="/">
+              <img src={Logo} alt="logo" className="w-[104px] h-[38px]" />
+            </Link>
+          </div>
 
           {/* Close */}
           <span onClick={() => { setOpen!(false) }}
@@ -71,19 +76,19 @@ const Sidebar = ({
         </div>
 
         {/* Links */} 
-        <div className="flex flex-col gap-6 items-start px-10 py-6 w-full h-full overflow-y-auto max-h-[calc(100vh-180px)] lg:max-h-[430px]">
+        <div className="flex flex-col gap-6 items-start px-10 py-6 w-full overflow-y-auto flex-1 min-h-0">
           {navbarLinks.map((link, index) => {
             const isActive = location.pathname === link.href ||
             (location.pathname === "/" && link.href === "/dashboard");
 
             return (
-              <span key={index} onClick={() => handleClick(link.href)}
+              <div key={index} onClick={() => handleClick(link.href)}
                 className={`cursor-pointer flex items-center justify-start gap-[10px] font-normal 
-                  text-lg leading-normal transition-all duration-200 hover:opacity-80
+                  text-base transition-all duration-200 hover:opacity-80
                   ${isActive ? "bg-white rounded-4xl h-[50px] text-[#0F1729] px-6.5 py-2" : "text-white"}`}>
                 <div>{link.icon}</div>
                 {link.link_text}
-              </span>)
+              </div>)
           })}
         </div>
       </div>

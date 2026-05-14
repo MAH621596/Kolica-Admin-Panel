@@ -19,7 +19,7 @@ const Filters = () => {
                     lg:text-sm !text-white h-[41px]" />
                 </div>
 
-                <HeroCard parentClass="h-full !p-5 !m-0 !rounded-[10px] flex-1 border border-[#E1E7EF] drop-shadow-[0_1px_2px_0_rgba(0,0,0,.5)]">
+                <HeroCard parentClass="!max-w-full !mx-0 h-full !p-5 !m-0 !rounded-[10px] flex-1 border border-[#E1E7EF] drop-shadow-[0_1px_2px_0_rgba(0,0,0,.5)]">
                     <div className="rounded-[10px] border border-[#E1E7EF] max-h-[430px] overflow-x-auto overflow-y-auto hide_scrollbar">
                         <table className="w-full border-collapse">
                             <thead className="sticky -top-[2px] z-10 bg-[#F1F5F9]">

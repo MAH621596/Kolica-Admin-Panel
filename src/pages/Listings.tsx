@@ -22,7 +22,7 @@ const Listings = () => {
                     lg:text-sm !text-white h-[41px]" />
                 </div>
 
-                <HeroCard parentClass="h-full !p-5 !m-0 !rounded-[10px] flex-1 border border-[#E1E7EF] drop-shadow-[0_1px_2px_0_rgba(0,0,0,.5)]">
+                <HeroCard parentClass="!max-w-full !mx-0 h-full !p-5 !m-0 !rounded-[10px] flex-1 border border-[#E1E7EF] drop-shadow-[0_1px_2px_0_rgba(0,0,0,.5)]">
                     <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-5 mb-8">
                         <div className="bg-[#F1F5F9] rounded-lg h-full md:h-[50px] flex flex-wrap items-center">
                             {ListingsTabData.map((tab) => (

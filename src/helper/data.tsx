@@ -22,61 +22,73 @@ import type { DashboardAdminData, ListingAdminData, UsersListData } from "@/comp
 
 export const navbarLinks = [
   {
+    id: 1,
     icon: <Dashboard className="stroke-current" />,
     link_text: "Dashboard",
     href: "/dashboard",
   },
   {
+    id: 2,
     icon: <Listings className="stroke-current" />,
     link_text: "Listings",
     href: "/listings",
   },
   {
+    id: 3,
     icon: <Users className="stroke-current" />,
     link_text: "Users",
     href: "/users",
   },
   {
+    id: 4,
     icon: <Users className="stroke-current" />,
     link_text: "⁠Merchants",
     href: "/merchants",
   },
   {
+    id: 5,
     icon: <Users className="stroke-current" />,
     link_text: "Premium Merchants",
     href: "/premium-Merchants",
   },
   {
+    id: 6,
     icon: <Categories className="stroke-current" />,
     link_text: "Categories",
     href: "/categories",
   },
   {
+    id: 7,
     icon: <Filters className="stroke-current" />,
     link_text: "Filters",
     href: "/filters",
   },
   {
+    id: 8,
     icon: <Transactions className="stroke-current" />,
     link_text: "Transactions",
     href: "/transactions",
   },
   {
+    id: 9,
     icon: <Reports className="stroke-current" />,
     link_text: "Reports",
     href: "/reports"
   },
   {
+    id: 10,
     icon: <Promotions className="stroke-current" />,
     link_text: "Promotions",
     href: "/promotions",
   },
   {
+    id: 11,
     icon: <Messages className="stroke-current" />,
     link_text: "Messages",
     href: "/messages",
   },
   {
+    id: 12,
     icon: <Settings className="stroke-current" />,
     link_text: "Settings",
     href: "/settings",
