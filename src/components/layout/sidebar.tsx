@@ -66,7 +66,7 @@ const Sidebar = ({
         </div>
 
         {/* Current Profile */}
-        <div className="flex items-center gap-5 px-10 w-full">
+        <div className="flex items-center gap-5 px-10 mb-5 w-full">
           <span className="w-12 h-12 bg-[#2474F5] rounded-full font-normal text-xs text-white flex items-center justify-center">
             <img src={Avatar} alt="btn" className="w-full h-full" />
           </span>
