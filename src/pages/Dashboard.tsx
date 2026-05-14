@@ -32,7 +32,7 @@ const Dashboard = () => {
 
         <div className="flex flex-col lg:flex-row gap-4 my-[30px]">
           <div className="flex-1">
-            <HeroCard parentClass="h-full !p-5 !mb-0 !rounded-[10px] flex-1 border border-[#E1E7EF] drop-shadow-[0_1px_2px_0_rgba(0,0,0,.5)]">
+            <HeroCard parentClass="!max-w-full !mx-0 h-full !p-5 !mb-0 !rounded-[10px] flex-1 border border-[#E1E7EF] drop-shadow-[0_1px_2px_0_rgba(0,0,0,.5)]">
               <div>
                 <h2 className="font-semibold text-base md:text-2xl leading-tight">
                   Listings Posted (This Week)</h2>
@@ -53,7 +53,7 @@ const Dashboard = () => {
           </div>
 
           <div className="basis-full md:basis-[230px]">
-            <HeroCard parentClass="!p-5 !mb-0 !rounded-[10px] border border-[#E1E7EF] drop-shadow-[0_1px_2px_0_rgba(0,0,0,.5)]">
+            <HeroCard parentClass="!max-w-full !mx-0 !p-5 !mb-0 !rounded-[10px] border border-[#E1E7EF] drop-shadow-[0_1px_2px_0_rgba(0,0,0,.5)]">
               <div>
                 <h2 className="font-semibold text-base md:text-2xl leading-tight">
                   User Growth</h2>
@@ -79,7 +79,7 @@ const Dashboard = () => {
 
         <div className="flex flex-col lg:flex-row items-stretch gap-4 my-[30px]">
           <div className="flex-1">
-            <HeroCard parentClass="h-full !p-0 !mb-0 !rounded-[10px] border border-[#E1E7EF] drop-shadow-[0_1px_2px_0_rgba(0,0,0,.5)]">
+            <HeroCard parentClass="!max-w-full !mx-0 h-full !p-0 !mb-0 !rounded-[10px] border border-[#E1E7EF] drop-shadow-[0_1px_2px_0_rgba(0,0,0,.5)]">
               <div>
                 <h2 className="font-semibold text-base md:text-2xl leading-tight p-5">
                   Latest Listings</h2>
@@ -101,7 +101,7 @@ const Dashboard = () => {
           </div>
 
           <div className="basis-full md:basis-[230px]">
-            <HeroCard parentClass="h-full !p-5 !mb-0 !rounded-[10px] border border-[#E1E7EF] drop-shadow-[0_1px_2px_0_rgba(0,0,0,.5)]">
+            <HeroCard parentClass="!max-w-full !mx-0 h-full !p-5 !mb-0 !rounded-[10px] border border-[#E1E7EF] drop-shadow-[0_1px_2px_0_rgba(0,0,0,.5)]">
               <div>
                 <h2 className="font-semibold text-base md:text-2xl leading-tight">
                   Top Categories</h2>
@@ -125,7 +125,7 @@ const Dashboard = () => {
         </div>
 
         <div className="flex-1">
-          <HeroCard parentClass="!p-0 !mb-0 !rounded-[10px] border border-[#E1E7EF] drop-shadow-[0_1px_2px_0_rgba(0,0,0,.5)]">
+          <HeroCard parentClass="!max-w-full !mx-0 !p-0 !mb-0 !rounded-[10px] border border-[#E1E7EF] drop-shadow-[0_1px_2px_0_rgba(0,0,0,.5)]">
             <div>
               <h2 className="font-semibold text-base md:text-2xl leading-tight p-5">
                 Recently Registered Users</h2>
